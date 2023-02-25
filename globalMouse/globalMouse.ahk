@@ -1,9 +1,13 @@
 global_mouse_en := 1
 
+gosub circle_init
+
 #include %a_scriptdir%\globalmouse\_\_rbutton_.ahk
 #include %a_scriptdir%\globalmouse\_\_mark_rbutton_.ahk
 #include %a_scriptdir%\globalmouse\_\_start.ahk
 #include %a_scriptdir%\globalmouse\_\_end.ahk
+#include %a_scriptdir%\globalmouse\_\_circle.ahk
+#include %a_scriptdir%\globalmouse\_\_is_.ahk
 
 #if global_mouse_en
 rbutton::

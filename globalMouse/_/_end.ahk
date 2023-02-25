@@ -4,4 +4,5 @@ global_mouse_end:
     click right
     tooltip
   }
+  gosub circle_hide
 return
