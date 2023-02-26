@@ -1,6 +1,13 @@
 global_mouse_en := 1
+
 click_right_en := 0
 remove_tooltip_en := 0
+
+count := 1
+count_canceled := 0
+count_ready := 0
+count_fix := 0
+count_max := 5
 
 direction := ""
 
@@ -22,6 +29,7 @@ gosub circle_init
 #include %a_scriptdir%\globalmouse\rbutton_mbutton_up.ahk
 #include %a_scriptdir%\globalmouse\rbutton_wheel_down.ahk
 #include %a_scriptdir%\globalmouse\rbutton_wheel_up.ahk
+#include %a_scriptdir%\globalmouse\do\count.ahk
 
 #if global_mouse_en
 rbutton::

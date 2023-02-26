@@ -29,6 +29,15 @@ global_mouse_var_mark:
   flag_rbutton_mbutton_up := 0
 return
 
+global_mouse_var_count:
+  if (count_fix == 0)
+  {
+    count := 1
+  }
+  count_canceled := 0
+  count_ready := 0
+return
+
 global_mouse_var_end:
   click_right_en := 0
   remove_tooltip_en := 0
@@ -38,6 +47,7 @@ global_mouse_var:
   gosub global_mouse_var_window
   gosub global_mouse_var_mark
   gosub global_mouse_var_end
+  gosub global_mouse_var_count
 return
 
 global_mouse_start:
