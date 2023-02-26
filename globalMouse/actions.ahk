@@ -1,7 +1,7 @@
 global_mouse_actions:
   mousegetpos, _x, _y
-  _str := "{:s} - [{:d}] ({:d}, {:d}) -> ({:d}, {:d})"
-  msg := format(_str, global_mouse_processname, count, global_mouse_x, global_mouse_y, _x, _y)
+  _str := "{:s} - [{:d}/{:d}]"
+  msg := format(_str, global_mouse_processname, count, count_fix)
   if (direction != "center")
   {
     count_canceled := 1
