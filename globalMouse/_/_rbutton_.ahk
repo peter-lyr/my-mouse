@@ -26,6 +26,7 @@ return
 
 _rbutton_mbutton_down:
   gosub _mark_rbutton_mbutton_down
+  gosub resize_window
 return
 
 _rbutton_mbutton_up:

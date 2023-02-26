@@ -1,0 +1,3 @@
+^#k::
+  winmaximize, A
+return

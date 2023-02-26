@@ -1,4 +1,15 @@
 do_rbutton_mbutton_down:
+  switch count
+  {
+    case 1:
+    {
+      gosub resize_window_start
+    }
+    case 2:
+    {
+      gosub resize_window_start
+    }
+  }
   switch direction
   {
     case "center":

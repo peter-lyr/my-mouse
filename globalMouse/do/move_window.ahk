@@ -14,8 +14,8 @@ move_window_watcher:
     return
   }
   mousegetpos, _x2, _y2
-  wingetpos, _x, _y, , , ahk_id %move_window_id%
   coordmode, mouse, screen
+  wingetpos, _x, _y, , , ahk_id %move_window_id%
   winmove, ahk_id %move_window_id%, , _x + _x2 - _x1, _y + _y2 - _y1
   _x1 := _x2
   _y1 := _y2
