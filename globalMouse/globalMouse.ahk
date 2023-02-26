@@ -1,4 +1,6 @@
 global_mouse_en := 1
+click_right_en := 1
+remove_tooltip_en := 1
 
 gosub circle_init
 
