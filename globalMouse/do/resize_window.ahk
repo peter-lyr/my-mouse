@@ -74,11 +74,12 @@ return
 resize_window:
   if (count < 3)
   {
-    gosub resize_window_do
     if (count == 2)
     {
+      mousegetpos, , , resize_window_id
       winactivate, ahk_id %resize_window_id%
     }
+    gosub resize_window_do
   }
 return
 
