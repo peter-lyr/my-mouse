@@ -10,7 +10,10 @@ activate_window:
     } else
     {
       remove_tooltip_en := 1
-      winactivate, ahk_id %global_mouse_id%
+      if (WinActive("ahk_id " . global_mouse_id) == 0)
+      {
+        winactivate, ahk_id %global_mouse_id%
+      }
     }
   }
 return
