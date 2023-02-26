@@ -33,6 +33,8 @@ circle_init:
 return
 
 circle_draw_1s:
+  _x := round(_mouse_x - circle_size/2)
+  _y := round(_mouse_y - circle_size/2)
   gui, show, x%_x% y%_y% na
 return
 

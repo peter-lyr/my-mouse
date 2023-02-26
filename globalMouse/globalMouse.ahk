@@ -1,6 +1,8 @@
 global_mouse_en := 1
-click_right_en := 1
-remove_tooltip_en := 1
+click_right_en := 0
+remove_tooltip_en := 0
+
+direction := ""
 
 gosub circle_init
 
@@ -10,6 +12,16 @@ gosub circle_init
 #include %a_scriptdir%\globalmouse\_\_end.ahk
 #include %a_scriptdir%\globalmouse\_\_circle.ahk
 #include %a_scriptdir%\globalmouse\_\_is_.ahk
+#include %a_scriptdir%\globalmouse\_\_direction.ahk
+#include %a_scriptdir%\globalmouse\_\_msg.ahk
+#include %a_scriptdir%\globalmouse\actions.ahk
+#include %a_scriptdir%\globalmouse\rbutton_up.ahk
+#include %a_scriptdir%\globalmouse\rbutton_lbutton_down.ahk
+#include %a_scriptdir%\globalmouse\rbutton_lbutton_up.ahk
+#include %a_scriptdir%\globalmouse\rbutton_mbutton_down.ahk
+#include %a_scriptdir%\globalmouse\rbutton_mbutton_up.ahk
+#include %a_scriptdir%\globalmouse\rbutton_wheel_down.ahk
+#include %a_scriptdir%\globalmouse\rbutton_wheel_up.ahk
 
 #if global_mouse_en
 rbutton::
