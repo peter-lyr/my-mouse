@@ -23,5 +23,15 @@ do_rbutton_up:
         }
       }
     }
+    case "right_up":
+    {
+      switch count
+      {
+        case 1:
+        {
+          gosub maximize_restore_window
+        }
+      }
+    }
   }
 return
