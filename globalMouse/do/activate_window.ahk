@@ -5,10 +5,11 @@ activate_window:
     {
       if (flag_rbutton_up == 0)
       {
-        push_msg_action(format("激活窗口{:s}", global_mouse_title))
+        push_msg_action(format("激活窗口{:s}", global_mouse_processname))
       }
     } else
     {
+      remove_tooltip_en := 1
       winactivate, ahk_id %global_mouse_id%
     }
   }

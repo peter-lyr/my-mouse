@@ -8,6 +8,7 @@ click_right:
       }
     } else
     {
+      remove_tooltip_en := 1
       click right
     }
   }
