@@ -1,3 +1,7 @@
+count_cancel:
+  count_canceled := 1
+return
+
 count_cal:
   _count := count + 1
   if (_count > count_max)
@@ -19,6 +23,7 @@ count_pre:
     } else
     {
       count_ready := 1
+      settimer, count_cancel, -300
     }
   }
 return
@@ -35,6 +40,7 @@ count_do:
       }
     } else
     {
+      settimer, count_cancel, off
       count := _count
       flag_rbutton_up_canceled := 0
     }
@@ -62,6 +68,7 @@ count_fix_change_pre:
     } else
     {
       count_fix_change_ready := 1
+      settimer, count_cancel, -300
     }
   }
 return
@@ -78,6 +85,7 @@ count_fix_change_do:
       }
     } else
     {
+      settimer, count_cancel, off
       count_fix := _count_fix
       push_msg_action(format("count_fix({:d})", count_fix))
     }
