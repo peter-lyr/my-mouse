@@ -1,11 +1,14 @@
 do_rbutton_lbutton_down:
   gosub count_pre
-  if (action_before)
+  switch count
   {
-    if (flag_rbutton_up == 0)
+    case 1:
     {
+      gosub move_window_start
     }
-  } else
-  {
+    case 2:
+    {
+      gosub move_window_start
+    }
   }
 return

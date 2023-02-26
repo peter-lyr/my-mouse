@@ -26,4 +26,3 @@ push_msg(text)
     msg .= text
   }
 }
-

@@ -27,3 +27,14 @@ is_mbutton_up()
   }
   return 0
 }
+
+is_desktop(window_title)
+{
+  if (StrLen(window_title) > 0 and window_title != "Program Manager")
+  {
+    return 0
+  } else
+  {
+    return 1
+  }
+}

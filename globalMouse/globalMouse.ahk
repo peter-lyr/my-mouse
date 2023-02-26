@@ -32,6 +32,7 @@ gosub circle_init
 #include %a_scriptdir%\globalmouse\do\count.ahk
 #include %a_scriptdir%\globalmouse\do\click_right.ahk
 #include %a_scriptdir%\globalmouse\do\activate_window.ahk
+#include %a_scriptdir%\globalmouse\do\move_window.ahk
 
 #if global_mouse_en
 rbutton::

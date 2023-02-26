@@ -17,6 +17,7 @@ return
 
 _rbutton_lbutton_down:
   gosub _mark_rbutton_lbutton_down
+  gosub move_window
 return
 
 _rbutton_lbutton_up:
