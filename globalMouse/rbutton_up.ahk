@@ -73,5 +73,15 @@ do_rbutton_up:
         }
       }
     }
+    case "right_down":
+    {
+      switch count
+      {
+        case 1:
+        {
+          gosub minimize_window
+        }
+      }
+    }
   }
 return
