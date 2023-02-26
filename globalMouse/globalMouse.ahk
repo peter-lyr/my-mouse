@@ -43,6 +43,7 @@ gosub circle_init
 #include %a_scriptdir%\globalmouse\do\volume.ahk
 #include %a_scriptdir%\globalmouse\do\shift_wheel.ahk
 #include %a_scriptdir%\globalmouse\do\pg_updn.ahk
+#include %a_scriptdir%\globalmouse\do\ctrl_win_left_right.ahk
 
 #if global_mouse_en
 rbutton::

@@ -41,5 +41,15 @@ do_rbutton_wheel_up:
         }
       }
     }
+    case "right_down":
+    {
+      switch count
+      {
+        case 1:
+        {
+          gosub ctrl_win_left
+        }
+      }
+    }
   }
 return
