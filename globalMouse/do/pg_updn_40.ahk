@@ -10,10 +10,12 @@ pgup_40:
     pgdn_cnt := 0
     while pgdn_cnt < 40
     {
-      if (flag_rbutton_wheel_down == 1) {
+      if (flag_rbutton_wheel_down == 1)
+      {
         break
       }
-      if (flag_rbutton_wheel_up == 1) {
+      if (flag_rbutton_wheel_up == 1)
+      {
         pgdn_cnt := 0
       }
       pgdn_cnt += 1
@@ -38,10 +40,12 @@ pgdn_40:
     pgdn_cnt := 0
     while pgdn_cnt < 40
     {
-      if (flag_rbutton_wheel_up == 1) {
+      if (flag_rbutton_wheel_up == 1)
+      {
         break
       }
-      if (flag_rbutton_wheel_down == 1) {
+      if (flag_rbutton_wheel_down == 1)
+      {
         pgdn_cnt := 0
       }
       pgdn_cnt += 1
