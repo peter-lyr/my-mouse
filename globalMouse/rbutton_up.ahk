@@ -53,5 +53,15 @@ do_rbutton_up:
         }
       }
     }
+    case "up":
+    {
+      switch count
+      {
+        case 1:
+        {
+          gosub topmost_toggle
+        }
+      }
+    }
   }
 return
