@@ -63,5 +63,15 @@ do_rbutton_up:
         }
       }
     }
+    case "left":
+    {
+      switch count
+      {
+        case 1:
+        {
+          gosub win_tab
+        }
+      }
+    }
   }
 return
