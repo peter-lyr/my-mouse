@@ -1,10 +1,27 @@
 do_rbutton_up:
-  if (action_before)
+  switch direction
   {
-    if (flag_rbutton_up == 0)
+    case "center":
     {
+      switch count
+      {
+        case 1:
+        {
+          gosub click_right
+        }
+        case 3:
+        {
+          gosub click_right
+        }
+        case 2:
+        {
+          gosub activate_window
+        }
+        case 4:
+        {
+          gosub activate_window
+        }
+      }
     }
-  } else
-  {
   }
 return

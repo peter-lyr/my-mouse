@@ -37,7 +37,6 @@ global_mouse_var_count:
 return
 
 global_mouse_var_end:
-  click_right_en := 0
   remove_tooltip_en := 0
 return
 

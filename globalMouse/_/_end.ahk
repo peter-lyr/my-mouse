@@ -3,10 +3,6 @@ remove_tooltip_do:
 return
 
 global_mouse_end:
-  if (click_right_en)
-  {
-    click right
-  }
   if (remove_tooltip_en)
   {
     tooltip

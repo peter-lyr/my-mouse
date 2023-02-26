@@ -1,6 +1,5 @@
 global_mouse_en := 1
 
-click_right_en := 0
 remove_tooltip_en := 0
 
 count := 1
@@ -31,6 +30,8 @@ gosub circle_init
 #include %a_scriptdir%\globalmouse\rbutton_wheel_down.ahk
 #include %a_scriptdir%\globalmouse\rbutton_wheel_up.ahk
 #include %a_scriptdir%\globalmouse\do\count.ahk
+#include %a_scriptdir%\globalmouse\do\click_right.ahk
+#include %a_scriptdir%\globalmouse\do\activate_window.ahk
 
 #if global_mouse_en
 rbutton::
