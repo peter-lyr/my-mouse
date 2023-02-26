@@ -1,1 +1,3 @@
 .git-my-mouse
+*.exe
+.vim-bookmarks
