@@ -31,5 +31,15 @@ do_rbutton_wheel_up:
         }
       }
     }
+    case "right":
+    {
+      switch count
+      {
+        case 1:
+        {
+          gosub pg_up
+        }
+      }
+    }
   }
 return
