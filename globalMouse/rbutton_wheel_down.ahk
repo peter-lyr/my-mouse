@@ -37,7 +37,11 @@ do_rbutton_wheel_down:
       {
         case 1:
         {
-          gosub pg_dn
+          gosub pgdn
+        }
+        case 2:
+        {
+          gosub pgdn_40
         }
       }
     }

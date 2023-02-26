@@ -1,4 +1,4 @@
-pg_up:
+pgup:
   if (action_before)
   {
     if (flag_rbutton_up == 0)
@@ -12,7 +12,7 @@ pg_up:
   }
 return
 
-pg_dn:
+pgdn:
   if (action_before)
   {
     if (flag_rbutton_up == 0)
