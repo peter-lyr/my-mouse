@@ -26,6 +26,7 @@ return
     winset, alwaysontop, on, a
   }
   tooltip %m%
+  settimer, remove_tooltip_do, -2300
 return
 
 ^#h::
