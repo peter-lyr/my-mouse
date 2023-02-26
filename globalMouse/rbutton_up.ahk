@@ -43,5 +43,15 @@ do_rbutton_up:
         }
       }
     }
+    case "down":
+    {
+      switch count
+      {
+        case 1:
+        {
+          gosub transparency_toggle
+        }
+      }
+    }
   }
 return

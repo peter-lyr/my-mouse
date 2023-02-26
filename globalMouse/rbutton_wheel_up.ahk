@@ -1,10 +1,15 @@
 do_rbutton_wheel_up:
-  if (action_before)
+  switch direction
   {
-    if (flag_rbutton_up == 0)
+    case "down":
     {
+      switch count
+      {
+        case 1:
+        {
+          gosub transparency_up
+        }
+      }
     }
-  } else
-  {
   }
 return
