@@ -7,6 +7,7 @@ pgup_40:
     }
   } else
   {
+    winactivate, ahk_id %global_mouse_id%
     pgdn_cnt := 0
     while pgdn_cnt < 40
     {
@@ -37,6 +38,7 @@ pgdn_40:
     }
   } else
   {
+    winactivate, ahk_id %global_mouse_id%
     pgdn_cnt := 0
     while pgdn_cnt < 40
     {

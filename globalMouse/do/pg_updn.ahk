@@ -7,6 +7,7 @@ pgup:
     }
   } else
   {
+    winactivate, ahk_id %global_mouse_id%
     send {pgup down}
     send {pgup up}
   }
@@ -21,6 +22,7 @@ pgdn:
     }
   } else
   {
+    winactivate, ahk_id %global_mouse_id%
     send {pgdn down}
     send {pgdn up}
   }

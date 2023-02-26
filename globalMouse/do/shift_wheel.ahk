@@ -7,6 +7,7 @@ shift_wheel_up:
     }
   } else
   {
+    winactivate, ahk_id %global_mouse_id%
     send {shift down}{wheelup}
     send {shift up}
   }
@@ -21,6 +22,7 @@ shift_wheel_down:
     }
   } else
   {
+    winactivate, ahk_id %global_mouse_id%
     send {shift down}{wheeldown}
     send {shift up}
   }
