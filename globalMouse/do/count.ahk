@@ -35,36 +35,45 @@ count_do:
   }
 return
 
-count_fix_on:
+count_fix_change_cal:
+  _count_fix := count_fix + 2
+  if (_count_fix > count_max)
+  {
+    _count_fix := 1
+  }
+return
+
+count_fix_change_pre:
   if (count_canceled == 0)
   {
+    gosub count_fix_change_cal
     if (action_before)
     {
       if (flag_rbutton_up == 0)
       {
-        push_msg_action(format("count({:d})固定", count))
+        push_msg_action(format("尝试count_fix({:d}) -> {:d}", count_fix, _count_fix))
       }
     } else
     {
-      count_fix := 1
-      push_msg_action(format("count({:d})已固定", count))
+      count_fix_change_ready := 1
     }
   }
 return
 
-count_fix_off:
-  if (count_canceled == 0)
+count_fix_change_do:
+  if (count_fix_change_ready == 1 and count_canceled == 0)
   {
+    gosub count_fix_change_cal
     if (action_before)
     {
       if (flag_rbutton_up == 0)
       {
-        push_msg_action(format("count({:d})每次恢复为1", count))
+        push_msg_action(format("count_fix({:d}) -> {:d}", count_fix, _count_fix))
       }
     } else
     {
-      count_fix := 0
-      push_msg_action(format("count({:d})已每次恢复为1", count))
+      count_fix := _count_fix
+      push_msg_action(format("count_fix({:d})", count_fix))
     }
   }
 return

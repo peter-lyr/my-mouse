@@ -6,8 +6,9 @@ remove_tooltip_en := 0
 count := 1
 count_canceled := 0
 count_ready := 0
-count_fix := 0
-count_max := 5
+count_fix_change_ready := 0
+count_fix := 1 ; 1,3,5,7,...
+count_max := 4 ; 2,4,6,8,...
 
 direction := ""
 

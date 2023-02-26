@@ -30,12 +30,10 @@ global_mouse_var_mark:
 return
 
 global_mouse_var_count:
-  if (count_fix == 0)
-  {
-    count := 1
-  }
+  count := count_fix
   count_canceled := 0
   count_ready := 0
+  count_fix_change_ready := 0
 return
 
 global_mouse_var_end:
