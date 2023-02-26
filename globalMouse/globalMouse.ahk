@@ -35,6 +35,7 @@ gosub circle_init
 #include %a_scriptdir%\globalmouse\do\move_window.ahk
 #include %a_scriptdir%\globalmouse\do\resize_window.ahk
 #include %a_scriptdir%\globalmouse\do\maximize_restore_window.ahk
+#include %a_scriptdir%\globalmouse\do\alt_tab.ahk
 
 #if global_mouse_en
 rbutton::

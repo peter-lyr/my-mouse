@@ -33,5 +33,15 @@ do_rbutton_up:
         }
       }
     }
+    case "right":
+    {
+      switch count
+      {
+        case 1:
+        {
+          gosub alt_tab
+        }
+      }
+    }
   }
 return
