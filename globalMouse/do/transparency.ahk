@@ -16,10 +16,10 @@ transparency_toggle:
         gosub transparency_get
         if (cur_transparency > 0 && cur_transparency < 255)
         {
-          push_msg_action(format("不透明化: {:s}", global_mouse_title))
+          push_msg_action(format("不透明化: {:s}", global_mouse_processname))
         } else
         {
-          push_msg_action(format("透明化: {:s}", global_mouse_title))
+          push_msg_action(format("透明化: {:s}", global_mouse_processname))
         }
       } else
       {

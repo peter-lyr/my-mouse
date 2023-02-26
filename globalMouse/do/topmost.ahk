@@ -8,10 +8,10 @@ topmost_toggle:
         winget, status, exstyle, ahk_id %global_mouse_id%
         if (status & 0x8)
         {
-          push_msg_action(format("取消置顶: {:s}", global_mouse_title))
+          push_msg_action(format("取消置顶: {:s}", global_mouse_processname))
         } else
         {
-          push_msg_action(format("置顶: {:s}", global_mouse_title))
+          push_msg_action(format("置顶: {:s}", global_mouse_processname))
         }
       } else
       {
@@ -25,11 +25,11 @@ topmost_toggle:
       winget, status, exstyle, ahk_id %global_mouse_id%
       if (status & 0x8)
       {
-        push_msg_action(format("已取消置顶: {:s}", global_mouse_title))
+        push_msg_action(format("已取消置顶: {:s}", global_mouse_processname))
         winset, alwaysontop, off, ahk_id %global_mouse_id%
       } else
       {
-        push_msg_action(format("已置顶: {:s}", global_mouse_title))
+        push_msg_action(format("已置顶: {:s}", global_mouse_processname))
         winset, alwaysontop, on, ahk_id %global_mouse_id%
       }
     }
