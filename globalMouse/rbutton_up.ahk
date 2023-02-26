@@ -5,7 +5,8 @@ do_rbutton_up:
     {
       push_msg_action(direction)
     }
-  } else {
+  } else
+  {
     push_msg_action(direction . " done")
   }
 return

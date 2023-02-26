@@ -5,7 +5,8 @@ do_rbutton_wheel_down:
     {
       push_msg_action(direction)
     }
-  } else {
+  } else
+  {
     push_msg_action(direction . " done")
   }
 return
