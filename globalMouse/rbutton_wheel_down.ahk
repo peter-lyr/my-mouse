@@ -21,5 +21,15 @@ do_rbutton_wheel_down:
         }
       }
     }
+    case "center":
+    {
+      switch count
+      {
+        case 1:
+        {
+          gosub shift_wheel_down
+        }
+      }
+    }
   }
 return

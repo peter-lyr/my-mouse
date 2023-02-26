@@ -41,6 +41,7 @@ gosub circle_init
 #include %a_scriptdir%\globalmouse\do\win_tab.ahk
 #include %a_scriptdir%\globalmouse\do\minimize_window.ahk
 #include %a_scriptdir%\globalmouse\do\volume.ahk
+#include %a_scriptdir%\globalmouse\do\shift_wheel.ahk
 
 #if global_mouse_en
 rbutton::

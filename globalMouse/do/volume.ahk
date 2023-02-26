@@ -8,7 +8,7 @@ volume_up:
     }
   } else
   {
-    send, {volume_up}
+    send {volume_up}
   }
 return
 
@@ -22,6 +22,6 @@ volume_down:
     }
   } else
   {
-    send, {volume_down}
+    send {volume_down}
   }
 return
