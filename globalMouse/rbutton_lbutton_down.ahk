@@ -4,11 +4,15 @@ do_rbutton_lbutton_down:
   {
     case 1:
     {
-      gosub move_window_start
+      gosub move_window_pre
     }
     case 2:
     {
-      gosub move_window_start
+      gosub move_window_pre
+    }
+    case 4:
+    {
+      gosub esc_pre
     }
   }
   switch direction

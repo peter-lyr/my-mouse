@@ -66,10 +66,6 @@ global_mouse_actions:
       gosub do_rbutton_mbutton_up
     }
   }
-  if (remove_tooltip_en)
-  {
-    return
-  }
   action_before := 1
   if (flag_rbutton_up_canceled == 0)
   {

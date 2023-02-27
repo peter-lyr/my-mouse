@@ -3,11 +3,11 @@ do_rbutton_mbutton_down:
   {
     case 1:
     {
-      gosub resize_window_start
+      gosub resize_window_pre
     }
     case 2:
     {
-      gosub resize_window_start
+      gosub resize_window_pre
     }
   }
   switch direction

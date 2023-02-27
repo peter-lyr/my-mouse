@@ -1,4 +1,4 @@
-resize_window_do:
+resize_window_ado:
   setwindelay, 0
   coordmode, mouse, screen
   mousegetpos, resize_window_x1, resize_window_y1, resize_window_id
@@ -79,11 +79,11 @@ resize_window:
       mousegetpos, , , resize_window_id
       winactivate, ahk_id %resize_window_id%
     }
-    gosub resize_window_do
+    gosub resize_window_ado
   }
 return
 
-resize_window_start:
+resize_window_pre:
   if (action_before)
   {
     if (flag_rbutton_up == 0)
@@ -98,7 +98,7 @@ resize_window_start:
   }
 return
 
-resize_window_end:
+resize_window_do:
   if (action_before)
   {
     if (flag_rbutton_up == 0)

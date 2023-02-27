@@ -3,11 +3,11 @@ do_rbutton_mbutton_up:
   {
     case 1:
     {
-      gosub resize_window_end
+      gosub resize_window_do
     }
     case 2:
     {
-      gosub resize_window_end
+      gosub resize_window_do
     }
   }
   switch direction

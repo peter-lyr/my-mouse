@@ -21,7 +21,7 @@ move_window_watcher:
   _y1 := _y2
 return
 
-move_window_do:
+move_window_ado:
   mousegetpos, _x1, _y1, move_window_id
   winget, _minmax_status, minmax, ahk_id %move_window_id%
   wingettitle, move_window_title, ahk_id %move_window_id%
@@ -39,7 +39,7 @@ return
 move_window:
   if (count < 3)
   {
-    gosub move_window_do
+    gosub move_window_ado
     if (count == 2)
     {
       winactivate, ahk_id %move_window_id%
@@ -47,7 +47,7 @@ move_window:
   }
 return
 
-move_window_start:
+move_window_pre:
   if (action_before)
   {
     if (flag_rbutton_up == 0)
@@ -62,7 +62,7 @@ move_window_start:
   }
 return
 
-move_window_end:
+move_window_do:
   if (action_before)
   {
     if (flag_rbutton_up == 0)
