@@ -74,7 +74,7 @@ move_window_ado:
   }
   wingetpos, move_window_ori_x, move_window_ori_y, move_window_w, move_window_h, ahk_id %move_window_id%
   wingetpos, tray_x, tray_y, tray_width, tray_height, ahk_class Shell_TrayWnd
-  offset := min(tray_width, tray_height) / 4
+  offset := min(tray_width, tray_height) / 5
   settimer, move_window_watcher2, 10
 return
 
