@@ -41,6 +41,10 @@ do_rbutton_up:
         {
           gosub alt_tab
         }
+        case 2:
+        {
+          gosub esc
+        }
       }
     }
     case "down":
@@ -68,6 +72,10 @@ do_rbutton_up:
       switch count
       {
         case 1:
+        {
+          gosub ctrl_alt_tab
+        }
+        case 2:
         {
           gosub win_tab
         }

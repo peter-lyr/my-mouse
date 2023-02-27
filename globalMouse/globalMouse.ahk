@@ -49,6 +49,8 @@ settimer, mstsc_watcher, 50
 #include %a_scriptdir%\globalmouse\do\pg_updn_40.ahk
 #include %a_scriptdir%\globalmouse\do\ctrl_win_left_right.ahk
 #include %a_scriptdir%\globalmouse\do\win_comma.ahk
+#include %a_scriptdir%\globalmouse\do\esc.ahk
+#include %a_scriptdir%\globalmouse\do\ctrl_alt_tab.ahk
 
 #if global_mouse_en
 rbutton::
