@@ -38,3 +38,12 @@ is_desktop(window_title)
     return 1
   }
 }
+
+is_explorer(title, processname)
+{
+  if (strlen(title) > 0 and regexmatch(processname, "i)explorer\.exe"))
+  {
+    return 1
+  }
+  return 0
+}

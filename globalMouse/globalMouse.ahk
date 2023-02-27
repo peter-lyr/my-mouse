@@ -51,6 +51,7 @@ settimer, mstsc_watcher, 50
 #include %a_scriptdir%\globalmouse\do\win_comma.ahk
 #include %a_scriptdir%\globalmouse\do\esc.ahk
 #include %a_scriptdir%\globalmouse\do\ctrl_alt_tab.ahk
+#include %a_scriptdir%\globalmouse\do\explorer\navigate.ahk
 
 #if global_mouse_en
 rbutton::

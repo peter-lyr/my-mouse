@@ -91,5 +91,15 @@ do_rbutton_up:
         }
       }
     }
+    case "left_up":
+    {
+      switch count
+      {
+        case 1:
+        {
+          gosub navigate_up
+        }
+      }
+    }
   }
 return

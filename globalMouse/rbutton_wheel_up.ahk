@@ -55,5 +55,15 @@ do_rbutton_wheel_up:
         }
       }
     }
+    case "left_up":
+    {
+      switch count
+      {
+        case 1:
+        {
+          gosub navigate_forward
+        }
+      }
+    }
   }
 return
