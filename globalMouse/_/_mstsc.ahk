@@ -9,4 +9,9 @@ mstsc_watcher:
   {
     global_mouse_en |= 1 << 0
   }
+  if (global_mouse_en == 0)
+  {
+    settimer, global_mouse_watcher, off
+    gosub global_mouse_end
+  }
 return
