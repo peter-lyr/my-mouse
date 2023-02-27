@@ -9,6 +9,10 @@ do_rbutton_mbutton_down:
     {
       gosub resize_window_pre
     }
+    case 4:
+    {
+      gosub win_kill_pre
+    }
   }
   switch direction
   {
