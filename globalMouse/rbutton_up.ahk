@@ -101,5 +101,19 @@ do_rbutton_up:
         }
       }
     }
+    case "left_down":
+    {
+      switch count
+      {
+        case 1:
+        {
+          gosub often_window_activate
+        }
+        case 2:
+        {
+          gosub often_window_new
+        }
+      }
+    }
   }
 return
