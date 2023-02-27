@@ -1,3 +1,43 @@
+
+move_window_watcher2:
+  setwindelay, 0
+  if (is_rbutton_up())
+  {
+    settimer, move_window_watcher2, off
+    coordmode, mouse, screen
+    winmove, ahk_id %move_window_id%, , %move_window_ori_x%, %move_window_ori_y%
+    tooltip
+    return
+  }
+  if (is_lbutton_up())
+  {
+    settimer, move_window_watcher2, off
+    return
+  }
+  mousegetpos, _x2, _y2
+  coordmode, mouse, screen
+  wingetpos, _x, _y, , , ahk_id %move_window_id%
+  x_new := _x + _x2 - _x1
+  y_new := _y + _y2 - _y1
+  if (x_new < -offset)
+  {
+    x_new := -offset
+  } else if (x_new + move_window_w > A_ScreenWidth + offset)
+  {
+    x_new := A_ScreenWidth - move_window_w + offset
+  }
+  if (y_new < -offset)
+  {
+    y_new := -offset
+  } else if (y_new + move_window_h > A_ScreenHeight + offset)
+  {
+    y_new := A_ScreenHeight - move_window_h + offset
+  }
+  winmove, ahk_id %move_window_id%, , x_new, y_new
+  _x1 := _x2
+  _y1 := _y2
+return
+
 move_window_watcher:
   setwindelay, 0
   if (is_rbutton_up())
@@ -32,8 +72,10 @@ move_window_ado:
     move_window_en := 0
     return
   }
-  wingetpos, move_window_ori_x, move_window_ori_y, , , ahk_id %move_window_id%
-  settimer, move_window_watcher, 10
+  wingetpos, move_window_ori_x, move_window_ori_y, move_window_w, move_window_h, ahk_id %move_window_id%
+  wingetpos, tray_x, tray_y, tray_width, tray_height, ahk_class Shell_TrayWnd
+  offset := min(tray_width, tray_height) / 4
+  settimer, move_window_watcher2, 10
 return
 
 move_window:
