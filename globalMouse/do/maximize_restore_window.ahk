@@ -27,10 +27,7 @@ maximize_restore_window:
       if (_status == 0)
       {
         winmaximize, ahk_id %global_mouse_id%
-        if (WinActive("ahk_id " . global_mouse_id) == 0)
-        {
-          winactivate, ahk_id %global_mouse_id%
-        }
+        gosub try_activate_global_mouse_id
       } else
       {
         winrestore, ahk_id %global_mouse_id%

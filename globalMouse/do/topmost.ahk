@@ -32,7 +32,7 @@ topmost_toggle:
         push_msg_action(format("已置顶: {:s}", global_mouse_processname))
         winset, alwaysontop, on, ahk_id %global_mouse_id%
       }
+      gosub try_activate_global_mouse_id
     }
   }
 return
-

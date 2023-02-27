@@ -7,10 +7,7 @@ pgup:
     }
   } else
   {
-    if (WinActive("ahk_id " . global_mouse_id) == 0)
-    {
-      winactivate, ahk_id %global_mouse_id%
-    }
+    gosub try_activate_global_mouse_id
     send {pgup down}
     send {pgup up}
   }
@@ -25,10 +22,7 @@ pgdn:
     }
   } else
   {
-    if (WinActive("ahk_id " . global_mouse_id) == 0)
-    {
-      winactivate, ahk_id %global_mouse_id%
-    }
+    gosub try_activate_global_mouse_id
     send {pgdn down}
     send {pgdn up}
   }

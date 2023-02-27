@@ -7,10 +7,7 @@ shift_wheel_up:
     }
   } else
   {
-    if (WinActive("ahk_id " . global_mouse_id) == 0)
-    {
-      winactivate, ahk_id %global_mouse_id%
-    }
+    gosub try_activate_global_mouse_id
     send {shift down}{wheelup}
     send {shift up}
   }
@@ -25,10 +22,7 @@ shift_wheel_down:
     }
   } else
   {
-    if (WinActive("ahk_id " . global_mouse_id) == 0)
-    {
-      winactivate, ahk_id %global_mouse_id%
-    }
+    gosub try_activate_global_mouse_id
     send {shift down}{wheeldown}
     send {shift up}
   }
