@@ -11,4 +11,17 @@ do_rbutton_lbutton_down:
       gosub move_window_start
     }
   }
+  switch direction
+  {
+    case "up":
+    {
+      switch count
+      {
+        case 3:
+        {
+          gosub win_comma_down
+        }
+      }
+    }
+  }
 return

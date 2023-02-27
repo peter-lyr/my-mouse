@@ -45,6 +45,7 @@ gosub circle_init
 #include %a_scriptdir%\globalmouse\do\pg_updn.ahk
 #include %a_scriptdir%\globalmouse\do\pg_updn_40.ahk
 #include %a_scriptdir%\globalmouse\do\ctrl_win_left_right.ahk
+#include %a_scriptdir%\globalmouse\do\win_comma.ahk
 
 #if global_mouse_en
 rbutton::

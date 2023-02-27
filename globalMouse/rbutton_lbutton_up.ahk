@@ -10,5 +10,9 @@ do_rbutton_lbutton_up:
     {
       gosub move_window_end
     }
+    case 3:
+    {
+      gosub win_up
+    }
   }
 return
