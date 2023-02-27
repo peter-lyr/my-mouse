@@ -1,3 +1,12 @@
+msg_init:
+  iniread, always_show_msg, main.ini, message, always_show
+  if (always_show_msg == "ERROR")
+  {
+    always_show_msg := 1
+    iniwrite %always_show_msg%, main.ini, message, always_show
+  }
+return
+
 push_msg_action(text)
 {
   global msg

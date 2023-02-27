@@ -107,5 +107,8 @@ global_mouse_actions:
       gosub do_rbutton_mbutton_up
     }
   }
-  tooltip %msg%
+  if (always_show_msg == 1)
+  {
+    tooltip %msg%
+  }
 return

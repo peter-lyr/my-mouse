@@ -42,6 +42,12 @@ count_do:
     {
       settimer, count_cancel, off
       count := _count
+      if (always_show_msg == -1)
+      {
+        _m := format("[{:d}/{:d}]", count, count_fix)
+        tooltip %_m%
+        settimer, remove_tooltip_do, -2300
+      }
       flag_rbutton_up_canceled := 0
     }
   }
@@ -87,7 +93,15 @@ count_fix_change_do:
     {
       settimer, count_cancel, off
       count_fix := _count_fix
-      push_msg_action(format("count_fix({:d})", count_fix))
+      if (always_show_msg == 1)
+      {
+        push_msg_action(format("count_fix({:d})", count_fix))
+      } else if (always_show_msg == -1)
+      {
+        _m := format("[{:d}/{:d}]", count, count_fix)
+        tooltip %_m%
+        settimer, remove_tooltip_do, -2300
+      }
     }
   }
 return

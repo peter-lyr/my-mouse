@@ -12,6 +12,7 @@ count_max := 4 ; 2,4,6,8,...
 direction := ""
 
 gosub circle_init
+gosub msg_init
 
 #include %a_scriptdir%\globalmouse\_\_rbutton_.ahk
 #include %a_scriptdir%\globalmouse\_\_mark_rbutton_.ahk
