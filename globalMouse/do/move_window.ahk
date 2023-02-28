@@ -15,24 +15,34 @@ move_window_watcher:
   }
   mousegetpos, _x2, _y2
   coordmode, mouse, screen
-  wingetpos, _x, _y, , , ahk_id %move_window_id%
+  wingetpos, _x, _y, _w, _h, ahk_id %move_window_id%
   x_new := _x + _x2 - _x1
   y_new := _y + _y2 - _y1
+  w_new := _w
+  h_new := _h
   if (x_new < origin_x)
   {
     x_new := origin_x
-  } else if (x_new + move_window_w > real_width)
+  } else if (x_new + _w > real_width)
   {
-    x_new := real_width - move_window_w
+    x_new := real_width - _w
   }
   if (y_new < origin_y)
   {
     y_new := origin_y
-  } else if (y_new + move_window_h > real_height)
+  } else if (y_new + _h > real_height)
   {
-    y_new := real_height - move_window_h
+    y_new := real_height - _h
   }
-  winmove, ahk_id %move_window_id%, , x_new, y_new
+  if (h_new > real_height)
+  {
+    h_new := real_height
+  }
+  if (w_new > real_width)
+  {
+    w_new := real_width
+  }
+  winmove, ahk_id %move_window_id%, , x_new, y_new, w_new, h_new
   _x1 := _x2
   _y1 := _y2
 return
@@ -60,7 +70,7 @@ move_window_watcher2:
   _y1 := _y2
 return
 
-move_window_do1:
+move_window_do2:
   mousegetpos, _x1, _y1, move_window_id
   winget, _minmax_status, minmax, ahk_id %move_window_id%
   wingettitle, move_window_title, ahk_id %move_window_id%
@@ -76,7 +86,7 @@ move_window_do1:
   settimer, move_window_watcher, 10
 return
 
-move_window_do2:
+move_window_do1:
   mousegetpos, _x1, _y1, move_window_id
   winget, _minmax_status, minmax, ahk_id %move_window_id%
   wingettitle, move_window_title, ahk_id %move_window_id%
@@ -99,10 +109,10 @@ move_window:
     if (count == 1)
     {
       gosub move_window_do1
-      winactivate, ahk_id %move_window_id%
     } else
     {
       gosub move_window_do2
+      winactivate, ahk_id %move_window_id%
     }
   }
 return

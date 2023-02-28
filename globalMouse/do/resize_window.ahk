@@ -1,4 +1,4 @@
-resize_window_ado:
+resize_window_do1:
   setwindelay, 0
   coordmode, mouse, screen
   mousegetpos, resize_window_x1, resize_window_y1, resize_window_id
@@ -79,7 +79,7 @@ resize_window:
       mousegetpos, , , resize_window_id
       winactivate, ahk_id %resize_window_id%
     }
-    gosub resize_window_ado
+    gosub resize_window_do1
   }
 return
 
