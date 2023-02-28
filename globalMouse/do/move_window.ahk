@@ -19,19 +19,19 @@ move_window_watcher2:
   wingetpos, _x, _y, , , ahk_id %move_window_id%
   x_new := _x + _x2 - _x1
   y_new := _y + _y2 - _y1
-  if (x_new < -offset)
+  if (x_new < origin_x)
   {
-    x_new := -offset
-  } else if (x_new + move_window_w > A_ScreenWidth + offset)
+    x_new := origin_x
+  } else if (x_new + move_window_w > real_width)
   {
-    x_new := A_ScreenWidth - move_window_w + offset
+    x_new := real_width - move_window_w
   }
-  if (y_new < -offset)
+  if (y_new < origin_y)
   {
-    y_new := -offset
-  } else if (y_new + move_window_h > A_ScreenHeight + offset)
+    y_new := origin_y
+  } else if (y_new + move_window_h > real_height)
   {
-    y_new := A_ScreenHeight - move_window_h + offset
+    y_new := real_height - move_window_h
   }
   winmove, ahk_id %move_window_id%, , x_new, y_new
   _x1 := _x2
@@ -74,8 +74,36 @@ move_window_ado:
   }
   wingetpos, move_window_ori_x, move_window_ori_y, move_window_w, move_window_h, ahk_id %move_window_id%
   wingetpos, tray_x, tray_y, tray_width, tray_height, ahk_class Shell_TrayWnd
-  offset := min(tray_width, tray_height) / 5
   settimer, move_window_watcher2, 10
+  if (tray_x != 0 or tray_y != 0)
+  {
+    origin_x := 0
+    origin_y := 0
+    if (tray_height == A_ScreenHeight)
+    {
+      real_height := A_ScreenHeight
+      real_width := A_ScreenWidth - tray_width
+    } else if (tray_width == A_ScreenWidth)
+    {
+      real_width := A_ScreenWidth
+      real_height := A_ScreenHeight - tray_height
+    }
+  } else if (tray_height == A_ScreenHeight)
+  {
+    origin_y := 0
+    origin_x := tray_width
+    real_height := A_ScreenHeight
+    real_width := A_ScreenWidth - tray_width
+  } else if (tray_width == A_ScreenWidth)
+  {
+    origin_x := 0
+    origin_y := tray_height
+    real_width := A_ScreenWidth
+    real_height := A_ScreenHeight - tray_height
+  }
+  ; t := format("{:d} {:d} {:d} {:d}", tray_x, tray_y, tray_width, tray_height)
+  ; t .= format(" + {:d} {:d} {:d} {:d}", origin_x, origin_y, real_width, real_height)
+  ; tooltip %t%
 return
 
 move_window:
