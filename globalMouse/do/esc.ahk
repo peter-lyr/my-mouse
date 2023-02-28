@@ -27,6 +27,10 @@ esc_pre:
     }
   } else
   {
+    if (WinActive("ahk_id " . _id) == 0)
+    {
+      winactivate, ahk_id %_id%
+    }
   }
 return
 
@@ -44,10 +48,6 @@ esc_do:
     } else
     {
       remove_tooltip_en := 1
-      if (WinActive("ahk_id " . _id) == 0)
-      {
-        winactivate, ahk_id %_id%
-      }
       send {esc}
     }
   }
