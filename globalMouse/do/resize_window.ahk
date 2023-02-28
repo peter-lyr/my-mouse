@@ -57,6 +57,10 @@ resize_window_do1:
     {
       break
     }
+    if (count_canceled == 1)
+    {
+      gosub circle_hide
+    }
     mousegetpos, resize_window_x2, resize_window_y2
     wingetpos, resize_window_current_x, resize_window_current_y, resize_window_current_w, resize_window_current_h, ahk_id %resize_window_id%
     resize_window_x2 -= resize_window_x1

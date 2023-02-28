@@ -19,6 +19,7 @@ move_window_watcher:
     {
       winactivate, ahk_id %move_window_id%
     }
+    gosub circle_hide
   }
   mousegetpos, _x2, _y2
   coordmode, mouse, screen
@@ -68,6 +69,10 @@ move_window_watcher2:
   {
     settimer, move_window_watcher2, off
     return
+  }
+  if (count_canceled == 1)
+  {
+    gosub circle_hide
   }
   mousegetpos, _x2, _y2
   coordmode, mouse, screen
