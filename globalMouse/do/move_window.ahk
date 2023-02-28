@@ -1,4 +1,3 @@
-
 move_window_watcher:
   setwindelay, 0
   if (is_rbutton_up())
