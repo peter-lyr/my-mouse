@@ -1,9 +1,9 @@
 
-move_window_watcher2:
+move_window_watcher:
   setwindelay, 0
   if (is_rbutton_up())
   {
-    settimer, move_window_watcher2, off
+    settimer, move_window_watcher, off
     coordmode, mouse, screen
     winmove, ahk_id %move_window_id%, , %move_window_ori_x%, %move_window_ori_y%
     tooltip
@@ -11,7 +11,7 @@ move_window_watcher2:
   }
   if (is_lbutton_up())
   {
-    settimer, move_window_watcher2, off
+    settimer, move_window_watcher, off
     return
   }
   mousegetpos, _x2, _y2
@@ -38,11 +38,11 @@ move_window_watcher2:
   _y1 := _y2
 return
 
-move_window_watcher:
+move_window_watcher2:
   setwindelay, 0
   if (is_rbutton_up())
   {
-    settimer, move_window_watcher, off
+    settimer, move_window_watcher2, off
     coordmode, mouse, screen
     winmove, ahk_id %move_window_id%, , %move_window_ori_x%, %move_window_ori_y%
     tooltip
@@ -50,7 +50,7 @@ move_window_watcher:
   }
   if (is_lbutton_up())
   {
-    settimer, move_window_watcher, off
+    settimer, move_window_watcher2, off
     return
   }
   mousegetpos, _x2, _y2
@@ -61,7 +61,7 @@ move_window_watcher:
   _y1 := _y2
 return
 
-move_window_ado:
+move_window_do1:
   mousegetpos, _x1, _y1, move_window_id
   winget, _minmax_status, minmax, ahk_id %move_window_id%
   wingettitle, move_window_title, ahk_id %move_window_id%
@@ -74,7 +74,6 @@ move_window_ado:
   }
   wingetpos, move_window_ori_x, move_window_ori_y, move_window_w, move_window_h, ahk_id %move_window_id%
   wingetpos, tray_x, tray_y, tray_width, tray_height, ahk_class Shell_TrayWnd
-  settimer, move_window_watcher2, 10
   if (tray_x != 0 or tray_y != 0)
   {
     origin_x := 0
@@ -101,18 +100,36 @@ move_window_ado:
     real_width := A_ScreenWidth
     real_height := A_ScreenHeight - tray_height
   }
-  ; t := format("{:d} {:d} {:d} {:d}", tray_x, tray_y, tray_width, tray_height)
-  ; t .= format(" + {:d} {:d} {:d} {:d}", origin_x, origin_y, real_width, real_height)
-  ; tooltip %t%
+  settimer, move_window_watcher, 10
+return
+
+move_window_do2:
+  mousegetpos, _x1, _y1, move_window_id
+  winget, _minmax_status, minmax, ahk_id %move_window_id%
+  wingettitle, move_window_title, ahk_id %move_window_id%
+  winget, move_window_processname, processname, ahk_id %move_window_id%
+  move_window_en := 1
+  if (_minmax_status or is_desktop(move_window_title) or is_mbutton_up() == 0)
+  {
+    move_window_en := 0
+    return
+  }
+  wingetpos, move_window_ori_x, move_window_ori_y, move_window_w, move_window_h, ahk_id %move_window_id%
+  wingetpos, tray_x, tray_y, tray_width, tray_height, ahk_class Shell_TrayWnd
+  offset := min(tray_width, tray_height) / 4
+  settimer, move_window_watcher2, 10
 return
 
 move_window:
   if (count < 3)
   {
-    gosub move_window_ado
-    if (count == 2)
+    if (count == 1)
     {
+      gosub move_window_do1
       winactivate, ahk_id %move_window_id%
+    } else
+    {
+      gosub move_window_do2
     }
   }
 return
