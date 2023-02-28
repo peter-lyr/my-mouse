@@ -13,6 +13,13 @@ move_window_watcher:
     settimer, move_window_watcher, off
     return
   }
+  if (count_canceled == 1)
+  {
+    if (WinActive("ahk_id " . move_window_id) == 0)
+    {
+      winactivate, ahk_id %move_window_id%
+    }
+  }
   mousegetpos, _x2, _y2
   coordmode, mouse, screen
   wingetpos, _x, _y, _w, _h, ahk_id %move_window_id%
@@ -70,7 +77,7 @@ move_window_watcher2:
   _y1 := _y2
 return
 
-move_window_do2:
+move_window_do1:
   mousegetpos, _x1, _y1, move_window_id
   winget, _minmax_status, minmax, ahk_id %move_window_id%
   wingettitle, move_window_title, ahk_id %move_window_id%
@@ -86,7 +93,7 @@ move_window_do2:
   settimer, move_window_watcher, 10
 return
 
-move_window_do1:
+move_window_do2:
   mousegetpos, _x1, _y1, move_window_id
   winget, _minmax_status, minmax, ahk_id %move_window_id%
   wingettitle, move_window_title, ahk_id %move_window_id%
@@ -99,7 +106,6 @@ move_window_do1:
   }
   wingetpos, move_window_ori_x, move_window_ori_y, move_window_w, move_window_h, ahk_id %move_window_id%
   wingetpos, tray_x, tray_y, tray_width, tray_height, ahk_class Shell_TrayWnd
-  offset := min(tray_width, tray_height) / 4
   settimer, move_window_watcher2, 10
 return
 
@@ -112,7 +118,6 @@ move_window:
     } else
     {
       gosub move_window_do2
-      winactivate, ahk_id %move_window_id%
     }
   }
 return
