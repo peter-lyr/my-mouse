@@ -73,33 +73,7 @@ move_window_do1:
     return
   }
   wingetpos, move_window_ori_x, move_window_ori_y, move_window_w, move_window_h, ahk_id %move_window_id%
-  wingetpos, tray_x, tray_y, tray_width, tray_height, ahk_class Shell_TrayWnd
-  if (tray_x != 0 or tray_y != 0)
-  {
-    origin_x := 0
-    origin_y := 0
-    if (tray_height == A_ScreenHeight)
-    {
-      real_height := A_ScreenHeight
-      real_width := A_ScreenWidth - tray_width
-    } else if (tray_width == A_ScreenWidth)
-    {
-      real_width := A_ScreenWidth
-      real_height := A_ScreenHeight - tray_height
-    }
-  } else if (tray_height == A_ScreenHeight)
-  {
-    origin_y := 0
-    origin_x := tray_width
-    real_height := A_ScreenHeight
-    real_width := A_ScreenWidth - tray_width
-  } else if (tray_width == A_ScreenWidth)
-  {
-    origin_x := 0
-    origin_y := tray_height
-    real_width := A_ScreenWidth
-    real_height := A_ScreenHeight - tray_height
-  }
+  gosub tray_info
   settimer, move_window_watcher, 10
 return
 

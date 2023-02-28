@@ -24,6 +24,7 @@ settimer, mstsc_watcher, 50
 #include %a_scriptdir%\globalmouse\_\_direction.ahk
 #include %a_scriptdir%\globalmouse\_\_msg.ahk
 #include %a_scriptdir%\globalmouse\_\_mstsc.ahk
+#include %a_scriptdir%\globalmouse\_\_tray.ahk
 #include %a_scriptdir%\globalmouse\actions.ahk
 #include %a_scriptdir%\globalmouse\rbutton_up.ahk
 #include %a_scriptdir%\globalmouse\rbutton_lbutton_down.ahk
