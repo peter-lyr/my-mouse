@@ -7,7 +7,8 @@ pgup:
     }
   } else
   {
-    gosub try_activate_global_mouse_id
+    mousegetpos, , , pgupdn_id
+    winactivate, ahk_id %pgupdn_id%
     send {pgup down}
     send {pgup up}
   }
@@ -22,7 +23,8 @@ pgdn:
     }
   } else
   {
-    gosub try_activate_global_mouse_id
+    mousegetpos, , , pgupdn_id
+    winactivate, ahk_id %pgupdn_id%
     send {pgdn down}
     send {pgdn up}
   }

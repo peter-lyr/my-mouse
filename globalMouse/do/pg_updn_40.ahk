@@ -7,7 +7,8 @@ pgup_40:
     }
   } else
   {
-    gosub try_activate_global_mouse_id
+    mousegetpos, , , pgupdn_id
+    winactivate, ahk_id %pgupdn_id%
     pgdn_cnt := 0
     while pgdn_cnt < 40
     {
@@ -38,7 +39,8 @@ pgdn_40:
     }
   } else
   {
-    gosub try_activate_global_mouse_id
+    mousegetpos, , , pgupdn_id
+    winactivate, ahk_id %pgupdn_id%
     pgdn_cnt := 0
     while pgdn_cnt < 40
     {
