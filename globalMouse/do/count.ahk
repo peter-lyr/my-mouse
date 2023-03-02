@@ -105,3 +105,21 @@ count_fix_change_do:
     }
   }
 return
+
+count_rbutton_cancel:
+  count_rbutton_ready := 0
+return
+
+count_rbutton_do:
+  if (count_rbutton_ready == 1 and mod(count, 2) == 1)
+  {
+    gosub count_cal
+    count := _count
+  }
+  gosub count_rbutton_cancel
+return
+
+count_rbutton_pre:
+  count_rbutton_ready := 1
+  settimer, count_rbutton_cancel, -300
+return
