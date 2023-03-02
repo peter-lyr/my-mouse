@@ -56,4 +56,5 @@ global_mouse_start:
   gosub global_mouse_var
   settimer, global_mouse_watcher, 10
   gosub count_rbutton_do
+  gosub count_rbutton_pre
 return

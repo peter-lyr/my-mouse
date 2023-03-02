@@ -13,5 +13,4 @@ global_mouse_end:
   settimer, remove_tooltip_do, -2300
   settimer, remove_tooltip_do2, -20
   gosub circle_hide
-  gosub count_rbutton_pre
 return
