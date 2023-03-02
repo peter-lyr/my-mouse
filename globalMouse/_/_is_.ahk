@@ -47,3 +47,15 @@ is_explorer(title, processname)
   }
   return 0
 }
+
+has_value(arr, var)
+{
+	for key, value in arr
+  {
+		if (value == var)
+    {
+      return 1
+    }
+  }
+	return 0
+}

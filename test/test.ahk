@@ -46,20 +46,18 @@ f12::
   test_break := 0
   loop, % windowid {
     cwindow = % windowid%a_index%
-    if cwindow not in %count_windows%
+    if (!has_value(count_windows, cwindow))
     {
-      m := cwindow
-      loop % count_windows.length()
+      wingettitle, _title, ahk_id %cwindow%
+      winget, _processname, processname, ahk_id %cwindow%
+      t := format("[{:s} {:s}]", _title, _processname)
+      if (strlen(_processname) > 0)
       {
-        m .= "["
-        m .= count_windows[A_Index]
-        m .= "]"
+        send {esc}
       }
-      msgbox %m%
-      if (test_break)
-      {
-        break
-      }
+    } else
+    {
+      break
     }
   }
 return
