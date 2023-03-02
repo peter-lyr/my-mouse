@@ -27,3 +27,22 @@ tray_info:
     real_height := A_ScreenHeight - tray_height
   }
 return
+
+monitor_info:
+  sysget, monitorcount, monitorcount
+  mousegetpos, _temp_x, _temp_y
+  loop, %monitorcount%
+  {
+    sysget, monitor, monitor, %a_index%
+    if (_temp_x >= monitorleft and _temp_x <= monitorright and _temp_y >= monitortop and _temp_y <= monitorbottom)
+    {
+      sysget, monitorworkarea, monitorworkarea, %a_index%
+      origin_x := monitorworkarealeft
+      origin_y := monitorworkareatop
+      real_width := monitorworkarearight - monitorworkarealeft
+      real_height := monitorworkareabottom - monitorworkareatop
+      t := format("({:d}, {:d}), ({:d}, {:d})", origin_x, origin_y, real_width, real_height)
+      ; msgbox %t%
+    }
+  }
+return

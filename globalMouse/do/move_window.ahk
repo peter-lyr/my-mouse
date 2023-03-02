@@ -31,16 +31,16 @@ move_window_watcher:
   if (x_new < origin_x)
   {
     x_new := origin_x
-  } else if (x_new + _w > real_width)
+  } else if (x_new + _w > real_width + origin_x)
   {
-    x_new := real_width - _w
+    x_new := real_width + origin_x - _w
   }
   if (y_new < origin_y)
   {
     y_new := origin_y
-  } else if (y_new + _h > real_height)
+  } else if (y_new + _h > real_height + origin_y)
   {
-    y_new := real_height - _h
+    y_new := real_height + origin_y - _h
   }
   if (h_new > real_height)
   {
@@ -94,7 +94,7 @@ move_window_do1:
     return
   }
   wingetpos, move_window_ori_x, move_window_ori_y, move_window_w, move_window_h, ahk_id %move_window_id%
-  gosub tray_info
+  gosub monitor_info
   settimer, move_window_watcher, 10
 return
 
