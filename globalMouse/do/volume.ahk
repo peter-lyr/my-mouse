@@ -8,6 +8,7 @@ volume_up:
     }
   } else
   {
+    gosub try_activate_global_mouse_id
     send {volume_up}
   }
 return
@@ -22,6 +23,7 @@ volume_down:
     }
   } else
   {
+    gosub try_activate_global_mouse_id
     send {volume_down}
   }
 return
