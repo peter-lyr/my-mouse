@@ -115,11 +115,42 @@ count_rbutton_do:
   {
     gosub count_cal
     count := _count
+    gosub count_rbutton_cancel
+    gosub count_windows_do
   }
-  gosub count_rbutton_cancel
 return
 
 count_rbutton_pre:
   count_rbutton_ready := 1
   settimer, count_rbutton_cancel, -300
+  if (mod(count, 2) == 1)
+  {
+    gosub count_windows_pre
+  }
+return
+
+count_windows_do:
+  detecthiddenwindows off
+  winget, windowid, list
+  loop, % windowid {
+    cwindow = % windowid%a_index%
+    if (!has_value(count_windows, cwindow))
+    {
+      winget, _processname, processname, ahk_id %cwindow%
+      if (strlen(_processname) > 0)
+      {
+        send {esc}
+      }
+    }
+  }
+return
+
+count_windows_pre:
+  detecthiddenwindows off
+  winget, windowid, list
+  count_windows := []
+  loop, % windowid {
+    cwindow = % windowid%a_index%
+    count_windows.push(cwindow)
+  }
 return
