@@ -16,17 +16,54 @@
   ; winactivate ahk_id %_temp_id%
   ; send {esc}
 
+  ; detecthiddenwindows off
+  ; winget, windowid, list
+  ; _t := ""
+  ; _c := 0
+  ; loop, % windowid {
+  ;   _c += 1
+  ;   cwindow = % windowid%a_index%
+  ;   wingettitle, _title, ahk_id %cwindow%
+  ;   winget, _processname, processname, ahk_id %cwindow%
+  ;   _t .= format("{:d}, {:d}, {:s}, {:s}`n", _c, cwindow, _title, _processname)
+  ; }
+  ; msgbox %_t%
+
   detecthiddenwindows off
   winget, windowid, list
-  _t := ""
-  _c := 0
+  count_windows := []
   loop, % windowid {
-    _c += 1
     cwindow = % windowid%a_index%
-    wingettitle, _title, ahk_id %cwindow%
-    winget, _processname, processname, ahk_id %cwindow%
-    _t .= format("{:d}, {:d}, {:s}, {:s}`n", _c, cwindow, _title, _processname)
+    count_windows.push(cwindow)
   }
-  msgbox %_t%
 
+return
+
+
+f12::
+  detecthiddenwindows off
+  winget, windowid, list
+  test_break := 0
+  loop, % windowid {
+    cwindow = % windowid%a_index%
+    if cwindow not in %count_windows%
+    {
+      m := cwindow
+      loop % count_windows.length()
+      {
+        m .= "["
+        m .= count_windows[A_Index]
+        m .= "]"
+      }
+      msgbox %m%
+      if (test_break)
+      {
+        break
+      }
+    }
+  }
+return
+
+~esc::
+  test_break := !test_break
 return
