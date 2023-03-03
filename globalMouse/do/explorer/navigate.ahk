@@ -13,6 +13,7 @@ navigate_up:
     remove_tooltip_en := 1
     if (is_explorer(global_mouse_title, global_mouse_processname) == 1)
     {
+      gosub try_activate_global_mouse_id
       send, {alt down}{up}
       send, {alt up}
     }
@@ -33,6 +34,7 @@ navigate_backward:
   {
     if (is_explorer(global_mouse_title, global_mouse_processname) == 1)
     {
+      gosub try_activate_global_mouse_id
       send, {alt down}{left}
       send, {alt up}
     }
@@ -53,6 +55,7 @@ navigate_forward:
   {
     if (is_explorer(global_mouse_title, global_mouse_processname) == 1)
     {
+      gosub try_activate_global_mouse_id
       send, {alt down}{right}
       send, {alt up}
     }
