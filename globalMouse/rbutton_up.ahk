@@ -31,6 +31,10 @@ do_rbutton_up:
         {
           gosub maximize_restore_window
         }
+        case 2:
+        {
+          gosub ctrl_v
+        }
       }
     }
     case "right":
@@ -64,6 +68,14 @@ do_rbutton_up:
         case 1:
         {
           gosub topmost_toggle
+        }
+        case 2:
+        {
+          gosub ctrl_c
+        }
+        case 3:
+        {
+          gosub ctrl_c_text
         }
       }
     }

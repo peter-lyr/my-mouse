@@ -21,7 +21,6 @@ win_up:
     }
   } else
   {
-    remove_tooltip_en := 1
     send {lwin up}
   }
 return
