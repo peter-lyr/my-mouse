@@ -58,6 +58,8 @@ settimer, mstsc_watcher, 50
 #include %a_scriptdir%\globalmouse\dt\ctrl_c.ahk
 #include %a_scriptdir%\globalmouse\dt\ctrl_v.ahk
 #include %a_scriptdir%\globalmouse\dt\task_kill.ahk
+#include %a_scriptdir%\globalmouse\dt\ctrl_z.ahk
+#include %a_scriptdir%\globalmouse\dt\ctrl_y.ahk
 
 #if global_mouse_en
 rbutton::
