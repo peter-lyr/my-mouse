@@ -1,7 +1,7 @@
 global_mouse_actions:
   mousegetpos, _x, _y
   _str := "{:s} - [{:d}/{:d}]"
-  msg := format(_str, global_mouse_processname, count, count_fix)
+  msg := ""
   if (direction != "center")
   {
     count_canceled := 1
@@ -105,6 +105,10 @@ global_mouse_actions:
   }
   if (always_show_msg == 1)
   {
-    tooltip %msg%
+    if (strlen(msg) > 0)
+    {
+      _msg := format(_str, global_mouse_processname, count, count_fix) . msg
+      tooltip %_msg%
+    }
   }
 return
