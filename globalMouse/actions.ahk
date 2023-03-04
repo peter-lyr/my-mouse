@@ -107,7 +107,7 @@ global_mouse_actions:
   {
     if (strlen(msg) > 0)
     {
-      _msg := format(_str, global_mouse_processname, count, count_fix) . msg
+      _msg := format(_str, global_mouse_processname, count, count_fix) . "`n" . msg
       tooltip %_msg%
     }
   }

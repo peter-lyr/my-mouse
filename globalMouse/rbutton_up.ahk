@@ -115,6 +115,10 @@ do_rbutton_up:
         {
           gosub win_kill
         }
+        case 3:
+        {
+          gosub task_kill
+        }
       }
     }
     case "left_down":
