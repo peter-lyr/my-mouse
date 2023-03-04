@@ -2,5 +2,5 @@
 *.exe
 *.lnk
 .vim-bookmarks
-*.ini
-!main.ini
+**.ini
+!/main.ini
