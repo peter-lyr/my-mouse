@@ -11,7 +11,7 @@ do_rbutton_mbutton_down:
     }
     case 4:
     {
-      gosub win_kill_pre
+      gosub alt_f4_pre
     }
   }
   switch direction

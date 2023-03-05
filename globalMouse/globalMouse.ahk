@@ -51,7 +51,7 @@ settimer, mstsc_watcher, 50
 #include %a_scriptdir%\globalmouse\do\ctrl_win_left_right.ahk
 #include %a_scriptdir%\globalmouse\do\win_comma.ahk
 #include %a_scriptdir%\globalmouse\do\esc.ahk
-#include %a_scriptdir%\globalmouse\do\winkill.ahk
+#include %a_scriptdir%\globalmouse\do\alt_f4.ahk
 #include %a_scriptdir%\globalmouse\do\ctrl_alt_tab.ahk
 #include %a_scriptdir%\globalmouse\do\often_window.ahk
 #include %a_scriptdir%\globalmouse\do\explorer\navigate.ahk

@@ -1,4 +1,4 @@
-win_kill:
+alt_f4:
   if (is_desktop(global_mouse_title) == 0)
   {
     if (action_before)
@@ -10,12 +10,14 @@ win_kill:
     } else
     {
       remove_tooltip_en := 1
-      winkill ahk_id %global_mouse_id%
+      gosub try_activate_global_mouse_id
+      send {alt down}{f4}
+      send {alt up}
     }
   }
 return
 
-win_kill_pre:
+alt_f4_pre:
   if (action_before)
   {
     if (flag_rbutton_up == 0)
@@ -36,7 +38,7 @@ win_kill_pre:
   }
 return
 
-win_kill_do:
+alt_f4_do:
   if (count_canceled == 1)
   {
     mousegetpos, , , _id

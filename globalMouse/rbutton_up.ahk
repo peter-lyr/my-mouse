@@ -117,7 +117,7 @@ do_rbutton_up:
         }
         case 2:
         {
-          gosub win_kill
+          gosub alt_f4
         }
         case 3:
         {
