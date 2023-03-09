@@ -62,6 +62,7 @@ do_rbutton_wheel_up:
         case 1:
         {
           gosub navigate_forward
+          gosub bcompare_ctrl_p
         }
       }
     }

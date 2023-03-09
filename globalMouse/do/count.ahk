@@ -129,6 +129,27 @@ count_rbutton_pre:
   }
 return
 
+count_lbutton_do:
+  if (count_lbutton_ready)
+  {
+    if (is_lbutton_up())
+    {
+      count_lbutton_ready := 0
+      flag_rbutton_up_canceled := 0
+      gosub count_cal
+      count := _count
+      click, up left
+    }
+  }
+return
+
+count_lbutton_pre:
+  if (!is_lbutton_up())
+  {
+    count_lbutton_ready := 1
+  }
+return
+
 count_windows_do:
   detecthiddenwindows off
   winget, windowid, list

@@ -3,6 +3,7 @@ global_mouse_watcher:
   {
     settimer, global_mouse_watcher, off
   }
+  gosub count_lbutton_do
   gosub global_mouse_direction
   gosub global_mouse_actions
 return
@@ -57,4 +58,5 @@ global_mouse_start:
   settimer, global_mouse_watcher, 10
   gosub count_rbutton_do
   gosub count_rbutton_pre
+  gosub count_lbutton_pre
 return
