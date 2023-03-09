@@ -48,6 +48,15 @@ is_explorer(title, processname)
   return 0
 }
 
+is_bcompare(processname)
+{
+  if (regexmatch(processname, "i)bcompare\.exe"))
+  {
+    return 1
+  }
+  return 0
+}
+
 has_value(arr, var)
 {
 	for key, value in arr
