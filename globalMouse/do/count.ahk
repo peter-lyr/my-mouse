@@ -132,7 +132,7 @@ return
 count_lbutton_do:
   if (count_lbutton_ready)
   {
-    if (is_lbutton_up())
+    if (flag_rbutton_lbutton_up)
     {
       count_lbutton_ready := 0
       flag_rbutton_up_canceled := 0
