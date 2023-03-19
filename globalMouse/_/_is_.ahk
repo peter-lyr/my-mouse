@@ -39,6 +39,17 @@ is_desktop(window_title)
   }
 }
 
+is_active_explorer()
+{
+  winget, _temp_processname, processname, A
+  wingettitle, _temp_title, A
+  if (strlen(_temp_title) > 0 and regexmatch(_temp_processname, "i)explorer\.exe"))
+  {
+    return 1
+  }
+  return 0
+}
+
 is_explorer(title, processname)
 {
   if (strlen(title) > 0 and regexmatch(processname, "i)explorer\.exe"))

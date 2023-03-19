@@ -48,3 +48,53 @@ return
     winrestore a
   }
 return
+
+~!f5::
+  if (is_active_explorer())
+  {
+    send {alt down}{left}
+    send {alt up}
+  }
+return
+
+~!f6::
+  if (is_active_explorer())
+  {
+    send {alt down}{up}
+    send {alt up}
+  }
+return
+
+~!f7::
+  if (is_active_explorer())
+  {
+    send {alt down}{right}
+    send {alt up}
+  }
+return
+
+~!l::
+  send {right}
+return
+
+~!h::
+  send {left}
+return
+
+~+!l::
+  send {ctrl down}{right}
+  send {ctrl up}
+return
+
+~+!h::
+  send {ctrl down}{left}
+  send {ctrl up}
+return
+
+~!i::
+  send {home}
+return
+
+~!o::
+  send {end}
+return
