@@ -74,27 +74,45 @@ return
 return
 
 ~!l::
-  send {right}
+  if (not is_active_neovim())
+  {
+    send {right}
+  }
 return
 
 ~!h::
-  send {left}
+  if (not is_active_neovim())
+  {
+    send {left}
+  }
 return
 
 ~+!l::
-  send {ctrl down}{right}
-  send {ctrl up}
+  if (not is_active_neovim())
+  {
+    send {ctrl down}{right}
+    send {ctrl up}
+  }
 return
 
 ~+!h::
-  send {ctrl down}{left}
-  send {ctrl up}
+  if (not is_active_neovim())
+  {
+    send {ctrl down}{left}
+    send {ctrl up}
+  }
 return
 
 ~!i::
-  send {home}
+  if (not is_active_neovim())
+  {
+    send {home}
+  }
 return
 
 ~!o::
-  send {end}
+  if (not is_active_neovim())
+  {
+    send {end}
+  }
 return
