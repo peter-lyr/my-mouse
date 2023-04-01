@@ -54,6 +54,7 @@ settimer, neovim_watcher, 50
 #include %a_scriptdir%\globalmouse\do\shift_wheel.ahk
 #include %a_scriptdir%\globalmouse\do\pg_updn.ahk
 #include %a_scriptdir%\globalmouse\do\pg_updn_40.ahk
+#include %a_scriptdir%\globalmouse\do\ctrl_home_end.ahk
 #include %a_scriptdir%\globalmouse\do\ctrl_win_left_right.ahk
 #include %a_scriptdir%\globalmouse\do\win_comma.ahk
 #include %a_scriptdir%\globalmouse\do\esc.ahk
@@ -69,7 +70,7 @@ settimer, neovim_watcher, 50
 #include %a_scriptdir%\globalmouse\dt\ctrl_y.ahk
 
 
-#Include %A_ScriptDir%\keyboard\keyboard.ahk
+#Include %A_ScriptDir%\keyboard\window.ahk
 #include %a_scriptdir%\keyboard\check_explorer.ahk
 #include %a_scriptdir%\keyboard\check_neovim.ahk
 #include %a_scriptdir%\keyboard\alt_left_right_up.ahk
