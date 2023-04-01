@@ -9,11 +9,15 @@ count_fix := 1 ; 1,3,5,7,...
 count_max := 4 ; 2,4,6,8,...
 direction := ""
 
+
+#MaxHotkeysPerInterval 1000
+
+
 gosub circle_init
 gosub msg_init
 settimer, mstsc_watcher, 50
-
-; keyboard
+settimer, explorer_watcher, 50
+settimer, neovim_watcher, 50
 
 
 #Include %A_ScriptDir%\globalMouse\globalMouse.ahk
@@ -66,6 +70,13 @@ settimer, mstsc_watcher, 50
 
 
 #Include %A_ScriptDir%\keyboard\keyboard.ahk
+#include %a_scriptdir%\keyboard\check_explorer.ahk
+#include %a_scriptdir%\keyboard\check_neovim.ahk
+#include %a_scriptdir%\keyboard\alt_left_right_up.ahk
+#include %a_scriptdir%\keyboard\cursor_arrow.ahk
+#include %a_scriptdir%\keyboard\cursor_arrow_ctrl.ahk
+#include %a_scriptdir%\keyboard\cursor_arrow_shift.ahk
+#include %a_scriptdir%\keyboard\cursor_arrow_ctrl_shift.ahk
 
 
 #Include %A_ScriptDir%\test\test.ahk
