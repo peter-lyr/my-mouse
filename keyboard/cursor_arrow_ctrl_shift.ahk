@@ -13,14 +13,14 @@ return
 return
 
 #if !neovim_keyboard_en
-^+!m::
+^+!'::
   send {ctrl down}{shift down}{right}
   send {ctrl up}
   send {shift up}
 return
 
 #if !neovim_keyboard_en
-^+!n::
+^+!;::
   send {ctrl down}{shift down}{left}
   send {ctrl up}
   send {shift up}

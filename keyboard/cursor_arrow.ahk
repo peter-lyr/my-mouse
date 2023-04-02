@@ -9,12 +9,12 @@ return
 return
 
 #if !neovim_keyboard_en
-^m::
+^'::
   send {right}
 return
 
 #if !neovim_keyboard_en
-^n::
+^;::
   send {left}
 return
 

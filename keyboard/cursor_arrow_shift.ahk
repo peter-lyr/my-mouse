@@ -11,13 +11,13 @@ return
 return
 
 #if !neovim_keyboard_en
-^+m::
+^+'::
   send {shift down}{right}
   send {shift up}
 return
 
 #if !neovim_keyboard_en
-^+n::
+^+;::
   send {shift down}{left}
   send {shift up}
 return
