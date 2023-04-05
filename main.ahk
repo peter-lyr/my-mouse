@@ -20,6 +20,15 @@ settimer, explorer_watcher, 50
 settimer, neovim_watcher, 50
 
 
+; keyboard
+gosub keyboard_init
+neovim_keyboard_en := 0
+
+
+; _
+#Include %A_ScriptDir%\_\macro.ahk
+
+
 #Include %A_ScriptDir%\globalMouse\globalMouse.ahk
 #include %a_scriptdir%\globalmouse\_\_rbutton_.ahk
 #include %a_scriptdir%\globalmouse\_\_mark_rbutton_.ahk
@@ -71,6 +80,8 @@ settimer, neovim_watcher, 50
 
 
 #Include %A_ScriptDir%\keyboard\window.ahk
+#include %a_scriptdir%\keyboard\keyboard_toggle.ahk
+#include %a_scriptdir%\keyboard\keyboard_init.ahk
 #include %a_scriptdir%\keyboard\check_explorer.ahk
 #include %a_scriptdir%\keyboard\check_neovim.ahk
 #include %a_scriptdir%\keyboard\alt_left_right_up.ahk
