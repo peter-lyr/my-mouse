@@ -21,8 +21,9 @@ settimer, neovim_watcher, 50
 
 
 ; keyboard
-gosub keyboard_init
 neovim_keyboard_en := 0
+explorer_keyboard_en := 0
+gosub keyboard_init
 
 
 ; _
