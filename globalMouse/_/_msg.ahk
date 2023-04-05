@@ -1,16 +1,9 @@
 msg_init:
-  iniread, always_show_msg, main.ini, global_mouse_message, always_show
+  iniread, always_show_msg, main.ini, globalmouse, always_show_msg
   if (always_show_msg == "ERROR")
   {
     always_show_msg := 1
-    iniwrite %always_show_msg%, main.ini, global_mouse_message, always_show
-  }
-  if (always_show_msg)
-  {
-    always_show_msg := 1
-  } else
-  {
-    always_show_msg := 0
+    iniwrite %always_show_msg%, main.ini, globalmouse, always_show_msg
   }
 return
 
