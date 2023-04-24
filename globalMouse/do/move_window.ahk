@@ -1,5 +1,6 @@
 move_window_watcher:
   setwindelay, 0
+  gosub monitor_info_2
   if (is_rbutton_up())
   {
     settimer, move_window_watcher, off

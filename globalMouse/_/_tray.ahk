@@ -46,3 +46,23 @@ monitor_info:
     }
   }
 return
+
+monitor_info_2:
+  sysget, monitorcount, monitorcount
+  mousegetpos, _temp_x, _temp_y
+  offset := 280
+  loop, %monitorcount%
+  {
+    sysget, monitor, monitor, %a_index%
+    if (_temp_x >= monitorleft + offset and _temp_x <= monitorright - offset and _temp_y >= monitortop + offset and _temp_y <= monitorbottom - offset)
+    {
+      sysget, monitorworkarea, monitorworkarea, %a_index%
+      origin_x := monitorworkarealeft
+      origin_y := monitorworkareatop
+      real_width := monitorworkarearight - monitorworkarealeft
+      real_height := monitorworkareabottom - monitorworkareatop
+      t := format("({:d}, {:d}), ({:d}, {:d})", origin_x, origin_y, real_width, real_height)
+      ; msgbox %t%
+    }
+  }
+return
