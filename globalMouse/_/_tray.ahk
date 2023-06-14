@@ -38,6 +38,10 @@ monitor_info:
     {
       sysget, monitorworkarea, monitorworkarea, %a_index%
       origin_x := monitorworkarealeft
+      if (monitorworkarealeft == 0)
+      {
+        origin_x := 80
+      }
       origin_y := monitorworkareatop
       real_width := monitorworkarearight - monitorworkarealeft
       real_height := monitorworkareabottom - monitorworkareatop
@@ -58,6 +62,10 @@ monitor_info_2:
     {
       sysget, monitorworkarea, monitorworkarea, %a_index%
       origin_x := monitorworkarealeft
+      if (monitorworkarealeft == 0)
+      {
+        origin_x := 80
+      }
       origin_y := monitorworkareatop
       real_width := monitorworkarearight - monitorworkarealeft
       real_height := monitorworkareabottom - monitorworkareatop
