@@ -54,11 +54,11 @@ return
 monitor_info_2:
   sysget, monitorcount, monitorcount
   mousegetpos, _temp_x, _temp_y
-  offset := 280
+  offset := 80
   loop, %monitorcount%
   {
     sysget, monitor, monitor, %a_index%
-    if (_temp_x >= monitorleft + offset and _temp_x <= monitorright - offset and _temp_y >= monitortop + offset and _temp_y <= monitorbottom - offset)
+    if (_temp_x >= monitorleft + offset and _temp_x <= monitorright - offset)
     {
       sysget, monitorworkarea, monitorworkarea, %a_index%
       origin_x := monitorworkarealeft
