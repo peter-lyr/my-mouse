@@ -38,13 +38,14 @@ monitor_info:
     {
       sysget, monitorworkarea, monitorworkarea, %a_index%
       origin_x := monitorworkarealeft
-      if (monitorworkarealeft == 0)
-      {
-        origin_x := 80
-      }
       origin_y := monitorworkareatop
       real_width := monitorworkarearight - monitorworkarealeft
       real_height := monitorworkareabottom - monitorworkareatop
+      if (monitorworkarealeft == 0)
+      {
+        origin_x := 80
+        real_width := monitorworkarearight - monitorworkarealeft - 80
+      }
       t := format("({:d}, {:d}), ({:d}, {:d})", origin_x, origin_y, real_width, real_height)
       ; msgbox %t%
     }
@@ -62,13 +63,14 @@ monitor_info_2:
     {
       sysget, monitorworkarea, monitorworkarea, %a_index%
       origin_x := monitorworkarealeft
-      if (monitorworkarealeft == 0)
-      {
-        origin_x := 80
-      }
       origin_y := monitorworkareatop
       real_width := monitorworkarearight - monitorworkarealeft
       real_height := monitorworkareabottom - monitorworkareatop
+      if (monitorworkarealeft == 0)
+      {
+        origin_x := 80
+        real_width := monitorworkarearight - monitorworkarealeft - 80
+      }
       t := format("({:d}, {:d}), ({:d}, {:d})", origin_x, origin_y, real_width, real_height)
       ; msgbox %t%
     }
