@@ -7,7 +7,7 @@ ctrl_c:
     }
   } else
   {
-    push_msg("已复制")
+    push_msg("copied")
     send {ctrl down}c
     send {ctrl up}
   }
@@ -19,12 +19,12 @@ ctrl_c_explorer_watcher:
     settimer, ctrl_c_explorer_watcher, off
     if (_clipboard != _oldclipboard) {
       clipboard=%clipboard%
-      pathcopied := "已复制"
+      pathcopied := "copied"
       pathcopied .= ": "
       pathcopied .= _clipboard
       _oldclipboard=%clipboard%
     } else {
-      pathcopied := "不变"
+      pathcopied := "same"
       pathcopied .= ": "
       pathcopied .= _clipboard
     }

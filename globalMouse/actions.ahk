@@ -11,7 +11,7 @@ global_mouse_actions:
   {
     if (flag_rbutton_up_canceled == 0)
     {
-      action_name := "松开右键"
+      action_name := "release rbutton"
       gosub do_rbutton_up
     } else if (flag_rbutton_wheel_done == 1)
     {
@@ -22,7 +22,7 @@ global_mouse_actions:
     flag_rbutton_wheel_down := 0
     if (is_lbutton_up() and is_mbutton_up())
     {
-      action_name := "向下滚轮"
+      action_name := "scroll down"
       gosub do_rbutton_wheel_down
     }
   } else if (flag_rbutton_wheel_up == 1)
@@ -30,7 +30,7 @@ global_mouse_actions:
     flag_rbutton_wheel_up := 0
     if (is_lbutton_up() and is_mbutton_up())
     {
-      action_name := "向上滚轮"
+      action_name := "scroll up"
       gosub do_rbutton_wheel_up
     }
   } else if (flag_rbutton_lbutton_down == 1)
@@ -38,7 +38,7 @@ global_mouse_actions:
     flag_rbutton_lbutton_down := 0
     if (is_mbutton_up())
     {
-      action_name := "按下左键"
+      action_name := "press lbutton"
       gosub do_rbutton_lbutton_down
     }
   } else if (flag_rbutton_lbutton_up == 1)
@@ -46,7 +46,7 @@ global_mouse_actions:
     flag_rbutton_lbutton_up := 0
     if (is_mbutton_up())
     {
-      action_name := "抬起左键"
+      action_name := "release lbutton"
       gosub do_rbutton_lbutton_up
     }
   } else if (flag_rbutton_mbutton_down == 1)
@@ -54,7 +54,7 @@ global_mouse_actions:
     flag_rbutton_mbutton_down := 0
     if (is_lbutton_up())
     {
-      action_name := "按下中键"
+      action_name := "press mbutton"
       gosub do_rbutton_mbutton_down
     }
   } else if (flag_rbutton_mbutton_up == 1)
@@ -62,32 +62,32 @@ global_mouse_actions:
     flag_rbutton_mbutton_up := 0
     if (is_lbutton_up())
     {
-      action_name := "抬起中键"
+      action_name := "release mbutton"
       gosub do_rbutton_mbutton_up
     }
   }
   action_before := 1
   if (flag_rbutton_up_canceled == 0)
   {
-    action_name := "松开右键"
+    action_name := "release rbutton"
     gosub do_rbutton_up
   }
   if (is_lbutton_up() and is_mbutton_up())
   {
-    action_name := "向下滚轮"
+    action_name := "scroll down"
     gosub do_rbutton_wheel_down
-    action_name := "向上滚轮"
+    action_name := "scroll up"
     gosub do_rbutton_wheel_up
   }
   if (is_mbutton_up())
   {
     if (is_lbutton_up())
     {
-      action_name := "按下左键"
+      action_name := "press lbutton"
       gosub do_rbutton_lbutton_down
     } else
     {
-      action_name := "抬起左键"
+      action_name := "release lbutton"
       gosub do_rbutton_lbutton_up
     }
   }
@@ -95,11 +95,11 @@ global_mouse_actions:
   {
     if (is_mbutton_up())
     {
-      action_name := "按下中键"
+      action_name := "press mbutton"
       gosub do_rbutton_mbutton_down
     } else
     {
-      action_name := "抬起中键"
+      action_name := "release mbutton"
       gosub do_rbutton_mbutton_up
     }
   }

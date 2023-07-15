@@ -18,11 +18,11 @@ return
   winget, _processname, processname, a
   if (status & 0x8)
   {
-    m := format("已取消置顶: {:s}", _processname)
+    m := format("topmost canceled: {:s}", _processname)
     winset, alwaysontop, off, a
   } else
   {
-    m := format("已置顶: {:s}", _processname)
+    m := format("topmost already: {:s}", _processname)
     winset, alwaysontop, on, a
   }
   tooltip %m%
