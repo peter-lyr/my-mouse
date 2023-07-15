@@ -3,7 +3,7 @@ esc:
   {
     if (flag_rbutton_up == 0)
     {
-      push_msg_action(format("发送<esc>到{:s}", global_mouse_processname))
+      push_msg_action(format("send <esc> to {:s}", global_mouse_processname))
     }
   } else
   {
@@ -22,7 +22,7 @@ esc_pre:
       {
         mousegetpos, , , _id
         winget, _processname, processname, ahk_id %_id%
-        push_msg_action(format("尝试发送<esc>到{:s}", _processname))
+        push_msg_action(format("try send <esc> to {:s}", _processname))
       }
     }
   } else
@@ -43,7 +43,7 @@ esc_do:
       {
         mousegetpos, , , _id
         winget, _processname, processname, ahk_id %_id%
-        push_msg_action(format("发送<esc>到{:s}", _processname))
+        push_msg_action(format("send <esc> to {:s}", _processname))
       }
     } else
     {

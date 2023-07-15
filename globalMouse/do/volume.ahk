@@ -4,7 +4,7 @@ volume_up:
     if (flag_rbutton_up == 0)
     {
       soundget, volume
-      push_msg_action(format("增大音量[{:d}]", volume))
+      push_msg_action(format("volume up[{:d}]", volume))
     }
   } else
   {
@@ -19,7 +19,7 @@ volume_down:
     if (flag_rbutton_up == 0)
     {
       soundget, volume
-      push_msg_action(format("降低音量[{:d}]", volume))
+      push_msg_action(format("volume down[{:d}]", volume))
     }
   } else
   {

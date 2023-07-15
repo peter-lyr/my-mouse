@@ -5,7 +5,7 @@ bcompare_ctrl_n:
     {
       if (is_bcompare(global_mouse_processname) == 1)
       {
-        push_msg_action("下一处差异")
+        push_msg_action("next diff")
       }
     }
   } else
@@ -27,7 +27,7 @@ bcompare_ctrl_p:
     {
       if (is_bcompare(global_mouse_processname) == 1)
       {
-        push_msg_action("上一处差异")
+        push_msg_action("prev diff")
       }
     }
   } else

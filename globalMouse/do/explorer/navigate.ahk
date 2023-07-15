@@ -5,7 +5,7 @@ navigate_up:
     {
       if (is_explorer(global_mouse_title, global_mouse_processname) == 1)
       {
-        push_msg_action("返回上一级目录")
+        push_msg_action("go up dir")
       }
     }
   } else
@@ -27,7 +27,7 @@ navigate_backward:
     {
       if (is_explorer(global_mouse_title, global_mouse_processname) == 1)
       {
-        push_msg_action("回退")
+        push_msg_action("go back")
       }
     }
   } else
@@ -48,7 +48,7 @@ navigate_forward:
     {
       if (is_explorer(global_mouse_title, global_mouse_processname) == 1)
       {
-        push_msg_action("前进")
+        push_msg_action("go forward")
       }
     }
   } else

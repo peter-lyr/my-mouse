@@ -12,7 +12,7 @@ activate_window:
     {
       if (flag_rbutton_up == 0)
       {
-        push_msg_action(format("激活窗口{:s}", global_mouse_processname))
+        push_msg_action(format("active win {:s}", global_mouse_processname))
       }
     } else
     {

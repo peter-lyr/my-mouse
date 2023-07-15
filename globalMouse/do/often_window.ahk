@@ -3,7 +3,7 @@ often_window_new:
   {
     if (flag_rbutton_up == 0)
     {
-      push_msg_action(format("选为最常用的窗口: {:s}", global_mouse_processname))
+      push_msg_action(format("choose as often window: {:s}", global_mouse_processname))
     }
   } else
   {
@@ -21,7 +21,7 @@ often_window_activate:
       {
         wingettitle, _title, ahk_id %often_window_id%
         winget, _processname, processname, ahk_id %often_window_id%
-        push_msg_action(format("激活最常用的窗口: {:s} [{:s}]", _processname, _title))
+        push_msg_action(format("active often window: {:s} [{:s}]", _processname, _title))
       }
     } else
     {

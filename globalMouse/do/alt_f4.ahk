@@ -29,7 +29,7 @@ alt_f4_pre:
         if (is_desktop(_title) == 0)
         {
           winget, _processname, processname, ahk_id %_id%
-          push_msg_action(format("尝试winkill{:s}", _processname))
+          push_msg_action(format("try winkill{:s}", _processname))
         }
       }
     }

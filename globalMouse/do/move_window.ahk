@@ -135,7 +135,7 @@ move_window_pre:
     {
       if (move_window_en)
       {
-        push_msg_action("移动窗口")
+        push_msg_action("move win")
       }
     }
   } else
@@ -150,8 +150,8 @@ move_window_do:
     {
       if (move_window_en)
       {
-        push_msg_action(format("确定窗口位置({:s})", move_window_processname))
-        push_msg(format("松开右键: 撤销窗口移动({:s})", move_window_processname))
+        push_msg_action(format("sure win pos({:s})", move_window_processname))
+        push_msg(format("release rmouse: cancel win pos({:s})", move_window_processname))
       }
     }
   } else

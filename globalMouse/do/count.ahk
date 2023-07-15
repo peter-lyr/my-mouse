@@ -18,7 +18,7 @@ count_pre:
     {
       if (flag_rbutton_up == 0)
       {
-        push_msg_action(format("count({:d}) -> {:d}尝试", count, _count))
+        push_msg_action(format("count({:d}) -> {:d} try", count, _count))
       }
     } else
     {
@@ -69,7 +69,7 @@ count_fix_change_pre:
     {
       if (flag_rbutton_up == 0)
       {
-        push_msg_action(format("count_fix({:d}) -> {:d}尝试", count_fix, _count_fix))
+        push_msg_action(format("count_fix({:d}) -> {:d} try", count_fix, _count_fix))
       }
     } else
     {

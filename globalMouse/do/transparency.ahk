@@ -16,14 +16,14 @@ transparency_toggle:
         gosub transparency_get
         if (cur_transparency > 0 && cur_transparency < 255)
         {
-          push_msg_action(format("不透明化: {:s}", global_mouse_processname))
+          push_msg_action(format("no transparency: {:s}", global_mouse_processname))
         } else
         {
-          push_msg_action(format("透明化: {:s}", global_mouse_processname))
+          push_msg_action(format("transparency: {:s}", global_mouse_processname))
         }
       } else
       {
-        push_msg_action("无法透明化桌面")
+        push_msg_action("can not transparency")
       }
     }
   } else
@@ -51,10 +51,10 @@ transparency_down:
       if (is_desktop(global_mouse_title) == 0)
       {
         gosub transparency_get
-        push_msg_action(format("减小窗口不透明度: {:d}", cur_transparency))
+        push_msg_action(format("minus transparency: {:d}", cur_transparency))
       } else
       {
-        push_msg_action("无法透明化桌面")
+        push_msg_action("can not transparency")
       }
     }
   } else
@@ -80,10 +80,10 @@ transparency_up:
       if (is_desktop(global_mouse_title) == 0)
       {
         gosub transparency_get
-        push_msg_action(format("增加窗口不透明度: {:d}", cur_transparency))
+        push_msg_action(format("plus transparency: {:d}", cur_transparency))
       } else
       {
-        push_msg_action("无法透明化桌面")
+        push_msg_action("can not transparency")
       }
     }
   } else

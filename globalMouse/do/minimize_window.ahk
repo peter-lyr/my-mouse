@@ -3,7 +3,7 @@ minimize_window:
   {
     if (flag_rbutton_up == 0)
     {
-      push_msg_action(format("最小化{:s}", global_mouse_processname))
+      push_msg_action(format("minimize win{:s}", global_mouse_processname))
     }
   } else
   {

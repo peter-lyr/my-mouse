@@ -8,14 +8,14 @@ topmost_toggle:
         winget, status, exstyle, ahk_id %global_mouse_id%
         if (status & 0x8)
         {
-          push_msg_action(format("取消置顶: {:s}", global_mouse_processname))
+          push_msg_action(format("cancel topmost: {:s}", global_mouse_processname))
         } else
         {
-          push_msg_action(format("置顶: {:s}", global_mouse_processname))
+          push_msg_action(format("topmost: {:s}", global_mouse_processname))
         }
       } else
       {
-        push_msg_action("无法置顶桌面")
+        push_msg_action("can not topmost")
       }
     }
   } else
@@ -25,11 +25,11 @@ topmost_toggle:
       winget, status, exstyle, ahk_id %global_mouse_id%
       if (status & 0x8)
       {
-        push_msg_action(format("已取消置顶: {:s}", global_mouse_processname))
+        push_msg_action(format("topmost canceled: {:s}", global_mouse_processname))
         winset, alwaysontop, off, ahk_id %global_mouse_id%
       } else
       {
-        push_msg_action(format("已置顶: {:s}", global_mouse_processname))
+        push_msg_action(format("topmost already: {:s}", global_mouse_processname))
         winset, alwaysontop, on, ahk_id %global_mouse_id%
       }
       gosub try_activate_global_mouse_id

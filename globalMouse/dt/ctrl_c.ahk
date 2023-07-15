@@ -44,7 +44,7 @@ return
 ctrl_c_explorer_msg:
   if (is_explorer(global_mouse_title, global_mouse_processname) == 1)
   {
-    push_msg_action("复制路径等文字")
+    push_msg_action("copy text such as path")
   }
 return
 

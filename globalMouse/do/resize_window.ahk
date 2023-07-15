@@ -94,7 +94,7 @@ resize_window_pre:
     {
       if (resize_window_en)
       {
-        push_msg_action("改变窗口大小")
+        push_msg_action("change win size")
       }
     }
   } else
@@ -109,8 +109,8 @@ resize_window_do:
     {
       if (resize_window_en)
       {
-        push_msg_action(format("确定窗口大小({:s})", resize_window_processname))
-        push_msg(format("松开右键: 撤销窗口大小改变({:s})", resize_window_processname))
+        push_msg_action(format("sure win size({:s})", resize_window_processname))
+        push_msg(format("release rmouse: cancel win size change({:s})", resize_window_processname))
       }
     }
   } else
