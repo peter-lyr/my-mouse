@@ -46,7 +46,7 @@ count_do:
       {
         _m := format("[{:d}/{:d}]", count, count_fix)
         tooltip %_m%
-        settimer, remove_tooltip_do, -2300
+        gosub tooltip_timeout
       }
       flag_rbutton_up_canceled := 0
     }
@@ -100,7 +100,7 @@ count_fix_change_do:
       {
         _m := format("[{:d}/{:d}]", count, count_fix)
         tooltip %_m%
-        settimer, remove_tooltip_do, -2300
+        gosub tooltip_timeout
       }
     }
   }

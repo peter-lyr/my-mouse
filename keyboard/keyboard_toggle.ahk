@@ -29,5 +29,5 @@ return
 ^#bs::
   gosub keyboard_toggle
   tooltip %_msg%
-  settimer, remove_tooltip_do, -2300
+  gosub tooltip_timeout
 return

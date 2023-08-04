@@ -5,6 +5,12 @@ msg_init:
     always_show_msg := 1
     iniwrite %always_show_msg%, main.ini, globalmouse, always_show_msg
   }
+  iniread, msg_timeout, main.ini, globalmouse, msg_timeout
+  if (msg_timeout == "ERROR")
+  {
+    msg_timeout := 1000
+    iniwrite %msg_timeout%, main.ini, globalmouse, msg_timeout
+  }
 return
 
 push_msg_action(text)
