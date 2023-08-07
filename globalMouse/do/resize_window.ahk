@@ -110,7 +110,7 @@ resize_window_do:
       if (resize_window_en)
       {
         push_msg_action(format("sure win size({:s})", resize_window_processname))
-        push_msg(format("release rmouse: cancel win size change({:s})", resize_window_processname))
+        push_msg(format("release rbutton: cancel win size change({:s})", resize_window_processname))
       }
     }
   } else

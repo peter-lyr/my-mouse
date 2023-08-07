@@ -151,7 +151,7 @@ move_window_do:
       if (move_window_en)
       {
         push_msg_action(format("sure win pos({:s})", move_window_processname))
-        push_msg(format("release rmouse: cancel win pos({:s})", move_window_processname))
+        push_msg(format("release rbutton: cancel win pos({:s})", move_window_processname))
       }
     }
   } else
