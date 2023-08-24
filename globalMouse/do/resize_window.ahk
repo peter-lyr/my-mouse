@@ -76,9 +76,9 @@ resize_window_do1:
 return
 
 resize_window:
-  if (count < 3)
+  if (count == 3 || count == 4)
   {
-    if (count == 2)
+    if (count == 4)
     {
       mousegetpos, , , resize_window_id
       winactivate, ahk_id %resize_window_id%

@@ -116,15 +116,12 @@ move_window_do2:
 return
 
 move_window:
-  if (count < 3)
+  if (count == 3)
   {
-    if (count == 1)
-    {
-      gosub move_window_do1
-    } else
-    {
-      gosub move_window_do2
-    }
+    gosub move_window_do1
+  } else if (count == 4)
+  {
+    gosub move_window_do2
   }
 return
 
