@@ -1,18 +1,18 @@
 do_rbutton_mbutton_down:
   switch count
   {
-    case 1:
-    {
-      gosub resize_window_pre
-    }
-    case 2:
-    {
-      gosub resize_window_pre
-    }
-    case 4:
-    {
-      gosub alt_f4_pre
-    }
+    ; case 1:
+    ; {
+    ;   gosub resize_window_pre
+    ; }
+    ; case 2:
+    ; {
+    ;   gosub resize_window_pre
+    ; }
+    ; case 4:
+    ; {
+    ;   gosub alt_f4_pre
+    ; }
   }
   switch direction
   {
@@ -20,14 +20,14 @@ do_rbutton_mbutton_down:
     {
       switch count
       {
-        case 2:
-        {
-          gosub count_fix_change_pre
-        }
-        case 4:
-        {
-          gosub count_fix_change_pre
-        }
+        ; case 2:
+        ; {
+        ;   gosub count_fix_change_pre
+        ; }
+        ; case 4:
+        ; {
+        ;   gosub count_fix_change_pre
+        ; }
       }
     }
   }
