@@ -1,1 +1,2 @@
 - [ ] unable to single left click mouse
+- [ ] center wheel up down change cnt
