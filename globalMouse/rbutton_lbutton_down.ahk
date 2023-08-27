@@ -5,6 +5,7 @@ do_rbutton_lbutton_down:
     case 1:
     {
       gosub move_window_pre
+      gosub nvim_ctrl_lbutton
     }
     case 2:
     {

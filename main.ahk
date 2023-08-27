@@ -73,6 +73,7 @@ gosub keyboard_init
 #include %a_scriptdir%\globalmouse\do\often_window.ahk
 #include %a_scriptdir%\globalmouse\do\explorer\navigate.ahk
 #include %a_scriptdir%\globalmouse\dt\bcompare\ctrl_np.ahk
+#include %a_scriptdir%\globalmouse\dt\nvim\ctrl_lbutton.ahk
 #include %a_scriptdir%\globalmouse\dt\ctrl_c.ahk
 #include %a_scriptdir%\globalmouse\dt\ctrl_v.ahk
 #include %a_scriptdir%\globalmouse\dt\task_kill.ahk

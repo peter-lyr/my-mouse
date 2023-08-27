@@ -50,6 +50,18 @@ is_active_explorer()
   return 0
 }
 
+is_mouse_on_neovim()
+{
+  mousegetpos, , , _temp_id
+  winget, _temp_processname, processname, ahk_id %_temp_id%
+  wingettitle, _temp_title, ahk_id %_temp_id%
+  if (strlen(_temp_title) > 0 and regexmatch(_temp_processname, "i)nvim-qt\.exe"))
+  {
+    return 1
+  }
+  return 0
+}
+
 is_active_neovim()
 {
   winget, _temp_processname, processname, A
