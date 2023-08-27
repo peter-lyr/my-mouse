@@ -1,2 +1,2 @@
 - [ ] unable to single left click mouse
-- [ ] center wheel up down change cnt
+- [ ] win move resize only start from center
