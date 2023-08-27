@@ -1,2 +1,2 @@
 - [ ] unable to single left click mouse
-- [ ] win move resize only start from center
+- [x] win move resize only start from center

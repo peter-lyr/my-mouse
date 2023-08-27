@@ -116,14 +116,18 @@ move_window_do2:
 return
 
 move_window:
-  if (count < 3)
-  {
-    if (count == 1)
+  if (flag_win_move_resize_en) {
+    flag_win_move_resize_en := 2
+    move_window_en := 1
+    if (count < 3)
     {
-      gosub move_window_do1
-    } else
-    {
-      gosub move_window_do2
+      if (count == 1)
+      {
+        gosub move_window_do1
+      } else
+      {
+        gosub move_window_do2
+      }
     }
   }
 return

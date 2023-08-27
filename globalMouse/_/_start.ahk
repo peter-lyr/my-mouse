@@ -14,6 +14,7 @@ global_mouse_var_window:
   winget, global_mouse_processname, processname, ahk_id %global_mouse_id%
   global_mouse_title := trim(global_mouse_title)
   global_mouse_processname := trim(global_mouse_processname)
+  flag_win_move_resize_en := 1
 return
 
 global_mouse_var_mark:

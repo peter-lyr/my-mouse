@@ -5,6 +5,11 @@ global_mouse_actions:
   if (direction != "center")
   {
     count_canceled := 1
+    if (flag_win_move_resize_en == 1) {
+      flag_win_move_resize_en := 0
+      move_window_en := 0
+      resize_window_en := 0
+    }
   }
   action_before := 0
   if (flag_rbutton_up == 1)

@@ -76,14 +76,18 @@ resize_window_do1:
 return
 
 resize_window:
-  if (count < 3)
-  {
-    if (count == 2)
+  if (flag_win_move_resize_en) {
+    flag_win_move_resize_en := 2
+    resize_window_en := 1
+    if (count < 3)
     {
-      mousegetpos, , , resize_window_id
-      winactivate, ahk_id %resize_window_id%
+      if (count == 2)
+      {
+        mousegetpos, , , resize_window_id
+        winactivate, ahk_id %resize_window_id%
+      }
+      gosub resize_window_do1
     }
-    gosub resize_window_do1
   }
 return
 
