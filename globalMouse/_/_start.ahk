@@ -38,6 +38,10 @@ global_mouse_var_count:
   count_fix_change_ready := 0
 return
 
+global_mouse_var_msg:
+  always_show_msg_changing := 0
+return
+
 global_mouse_var_end:
   remove_tooltip_en := 0
 return
@@ -47,6 +51,7 @@ global_mouse_var:
   gosub global_mouse_var_mark
   gosub global_mouse_var_end
   gosub global_mouse_var_count
+  gosub global_mouse_var_msg
 return
 
 global_mouse_start:

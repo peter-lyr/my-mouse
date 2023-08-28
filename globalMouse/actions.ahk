@@ -108,7 +108,7 @@ global_mouse_actions:
       gosub do_rbutton_mbutton_up
     }
   }
-  if (always_show_msg == 1)
+  if (always_show_msg == 1 || always_show_msg_changing)
   {
     if (strlen(msg) > 0)
     {
