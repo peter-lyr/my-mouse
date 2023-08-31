@@ -45,7 +45,7 @@ navigate_backward:
     if (is_neovim(global_mouse_title, global_mouse_processname) == 1)
     {
       gosub try_activate_global_mouse_id
-      send, {ctrl down}i
+      send, {ctrl down}o
       send, {ctrl up}
     }
   }
@@ -76,7 +76,7 @@ navigate_forward:
     if (is_neovim(global_mouse_title, global_mouse_processname) == 1)
     {
       gosub try_activate_global_mouse_id
-      send, {ctrl down}o
+      send, {ctrl down}i
       send, {ctrl up}
     }
   }
