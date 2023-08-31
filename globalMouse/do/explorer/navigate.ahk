@@ -29,6 +29,10 @@ navigate_backward:
       {
         push_msg_action("go back")
       }
+      if (is_neovim(global_mouse_title, global_mouse_processname) == 1)
+      {
+        push_msg_action("go back")
+      }
     }
   } else
   {
@@ -37,6 +41,12 @@ navigate_backward:
       gosub try_activate_global_mouse_id
       send, {alt down}{left}
       send, {alt up}
+    }
+    if (is_neovim(global_mouse_title, global_mouse_processname) == 1)
+    {
+      gosub try_activate_global_mouse_id
+      send, {ctrl down}i
+      send, {ctrl up}
     }
   }
 return
@@ -50,6 +60,10 @@ navigate_forward:
       {
         push_msg_action("go forward")
       }
+      if (is_neovim(global_mouse_title, global_mouse_processname) == 1)
+      {
+        push_msg_action("go forward")
+      }
     }
   } else
   {
@@ -58,6 +72,12 @@ navigate_forward:
       gosub try_activate_global_mouse_id
       send, {alt down}{right}
       send, {alt up}
+    }
+    if (is_neovim(global_mouse_title, global_mouse_processname) == 1)
+    {
+      gosub try_activate_global_mouse_id
+      send, {ctrl down}o
+      send, {ctrl up}
     }
   }
 return
