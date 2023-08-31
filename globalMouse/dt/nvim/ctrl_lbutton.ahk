@@ -1,3 +1,20 @@
+nvim_references:
+  if (is_neovim(global_mouse_title, global_mouse_processname)) {
+    if (action_before)
+    {
+        push_msg_action("<space>fe")
+    } else
+    {
+      send {esc down}
+      send {esc up}
+      click, left
+      click, up left
+      send {space down}fe
+      send {space up}
+    }
+  }
+return
+
 nvim_ctrl_lbutton:
   if (is_neovim(global_mouse_title, global_mouse_processname) && !flag_win_move_resize_en) {
     if (action_before)
