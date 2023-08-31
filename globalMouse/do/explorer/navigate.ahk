@@ -25,14 +25,14 @@ navigate_backward:
   {
     if (flag_rbutton_up == 0)
     {
-      if (is_explorer(global_mouse_title, global_mouse_processname) == 1)
+      if (is_explorer(global_mouse_title, global_mouse_processname) == 1 || is_msedge(global_mouse_title, global_mouse_processname) == 1)
       {
         push_msg_action("go back")
       }
     }
   } else
   {
-    if (is_explorer(global_mouse_title, global_mouse_processname) == 1)
+    if (is_explorer(global_mouse_title, global_mouse_processname) == 1 || is_msedge(global_mouse_title, global_mouse_processname) == 1)
     {
       gosub try_activate_global_mouse_id
       send, {alt down}{left}
@@ -46,14 +46,14 @@ navigate_forward:
   {
     if (flag_rbutton_up == 0)
     {
-      if (is_explorer(global_mouse_title, global_mouse_processname) == 1)
+      if (is_explorer(global_mouse_title, global_mouse_processname) == 1 || is_msedge(global_mouse_title, global_mouse_processname) == 1)
       {
         push_msg_action("go forward")
       }
     }
   } else
   {
-    if (is_explorer(global_mouse_title, global_mouse_processname) == 1)
+    if (is_explorer(global_mouse_title, global_mouse_processname) == 1 || is_msedge(global_mouse_title, global_mouse_processname) == 1)
     {
       gosub try_activate_global_mouse_id
       send, {alt down}{right}

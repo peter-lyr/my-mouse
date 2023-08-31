@@ -73,6 +73,15 @@ is_active_neovim()
   return 0
 }
 
+is_msedge(title, processname)
+{
+  if (strlen(title) > 0 and regexmatch(processname, "i)msedge\.exe"))
+  {
+    return 1
+  }
+  return 0
+}
+
 is_explorer(title, processname)
 {
   if (strlen(title) > 0 and regexmatch(processname, "i)explorer\.exe"))
