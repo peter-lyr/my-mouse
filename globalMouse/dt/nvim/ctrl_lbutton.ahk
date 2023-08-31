@@ -2,15 +2,17 @@ nvim_references:
   if (is_neovim(global_mouse_title, global_mouse_processname)) {
     if (action_before)
     {
-        push_msg_action("<space>fe")
+        push_msg_action("<s-f12> references")
     } else
     {
       send {esc down}
       send {esc up}
       click, left
       click, up left
-      send {space down}fe
-      send {space up}
+      send {shift down}
+      send {f12 down}
+      send {shift up}
+      send {f12 up}
     }
   }
 return
