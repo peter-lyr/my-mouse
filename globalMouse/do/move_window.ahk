@@ -168,10 +168,10 @@ move_window_do:
 return
 
 move_window_init:
-  iniread, leftmargin, main.ini, globalmouse, leftmargin
+  iniread, leftmargin, main.ini, movewindow, leftmargin
   if (leftmargin == "ERROR")
   {
     leftmargin := 80
-    iniwrite %leftmargin%, main.ini, globalmouse, leftmargin
+    iniwrite %leftmargin%, main.ini, movewindow, leftmargin
   }
 return
