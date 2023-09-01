@@ -19,6 +19,10 @@ do_rbutton_wheel_up:
         {
           gosub volume_up
         }
+        case 3:
+        {
+          gosub move_window_leftmargin_up
+        }
         case 4:
         {
           gosub always_show_msg_change_up

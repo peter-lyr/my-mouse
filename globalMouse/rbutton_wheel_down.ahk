@@ -19,6 +19,10 @@ do_rbutton_wheel_down:
         {
           gosub volume_down
         }
+        case 3:
+        {
+          gosub move_window_leftmargin_down
+        }
         case 4:
         {
           gosub always_show_msg_change_down
