@@ -116,6 +116,10 @@ move_window_do2:
 return
 
 move_window:
+  if (leftmargin <= 0)
+  {
+    gosub move_window_init
+  }
   if (flag_win_move_resize_en) {
     flag_win_move_resize_en := 2
     move_window_en := 1
@@ -160,5 +164,14 @@ move_window_do:
     }
   } else
   {
+  }
+return
+
+move_window_init:
+  iniread, leftmargin, main.ini, globalmouse, leftmargin
+  if (leftmargin == "ERROR")
+  {
+    leftmargin := 80
+    iniwrite %leftmargin%, main.ini, globalmouse, leftmargin
   }
 return

@@ -43,8 +43,8 @@ monitor_info:
       real_height := monitorworkareabottom - monitorworkareatop
       if (monitorworkarealeft == 0)
       {
-        origin_x := 80
-        real_width := monitorworkarearight - monitorworkarealeft - 80
+        origin_x := leftmargin
+        real_width := monitorworkarearight - monitorworkarealeft - leftmargin
       }
       t := format("({:d}, {:d}), ({:d}, {:d})", origin_x, origin_y, real_width, real_height)
       ; msgbox %t%
@@ -55,7 +55,7 @@ return
 monitor_info_2:
   sysget, monitorcount, monitorcount
   mousegetpos, _temp_x, _temp_y
-  offset := 80
+  offset := leftmargin
   loop, %monitorcount%
   {
     sysget, monitor, monitor, %a_index%
@@ -68,8 +68,8 @@ monitor_info_2:
       real_height := monitorworkareabottom - monitorworkareatop
       if (monitorworkarealeft == 0)
       {
-        origin_x := 80
-        real_width := monitorworkarearight - monitorworkarealeft - 80
+        origin_x := leftmargin
+        real_width := monitorworkarearight - monitorworkarealeft - leftmargin
       }
       t := format("({:d}, {:d}), ({:d}, {:d})", origin_x, origin_y, real_width, real_height)
       ; msgbox %t%
