@@ -116,7 +116,7 @@ move_window_do2:
 return
 
 move_window:
-  if (leftmargin <= 0)
+  if (leftmargin <= 0 || leftmarginstep <= 0 || leftmarginmax <= 0)
   {
     gosub move_window_init
   }
