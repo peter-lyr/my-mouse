@@ -205,6 +205,7 @@ move_window_leftmargin_up:
     {
       leftmargin := leftmarginmax
     }
+    iniwrite %leftmargin%, main.ini, movewindow, leftmargin
   }
 return
 
@@ -225,6 +226,7 @@ move_window_leftmargin_down:
     {
       leftmargin := 0
     }
+    iniwrite %leftmargin%, main.ini, movewindow, leftmargin
   }
 return
 
