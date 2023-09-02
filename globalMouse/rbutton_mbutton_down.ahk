@@ -4,7 +4,7 @@ do_rbutton_mbutton_down:
     case 1:
     {
       gosub resize_window_pre
-      gosub nvim_ctrl_rbutton
+      gosub ctrl_rbutton
     }
     case 2:
     {
