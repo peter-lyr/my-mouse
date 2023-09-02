@@ -168,22 +168,22 @@ move_window_do:
 return
 
 move_window_init:
+  if (leftmarginstep == "ERROR")
+  {
+    leftmarginstep := 112
+    iniwrite %leftmarginstep%, main.ini, movewindow, leftmarginstep
+  }
   iniread, leftmargin, main.ini, movewindow, leftmargin
   if (leftmargin == "ERROR")
   {
-    leftmargin := 80
+    leftmargin := leftmarginstep
     iniwrite %leftmargin%, main.ini, movewindow, leftmargin
   }
   iniread, leftmarginstep, main.ini, movewindow, leftmarginstep
-  if (leftmarginstep == "ERROR")
-  {
-    leftmarginstep := 80
-    iniwrite %leftmarginstep%, main.ini, movewindow, leftmarginstep
-  }
   iniread, leftmarginmax, main.ini, movewindow, leftmarginmax
   if (leftmarginmax == "ERROR")
   {
-    leftmarginmax := 800
+    leftmarginmax := 1120
     iniwrite %leftmarginmax%, main.ini, movewindow, leftmarginmax
   }
 return
@@ -191,7 +191,7 @@ return
 move_window_leftmargin_up:
   if (action_before)
   {
-    _leftmargin := leftmargin + 80
+    _leftmargin := leftmargin + leftmarginstep
     if (_leftmargin > leftmarginmax)
     {
       _leftmargin := leftmarginmax
@@ -200,7 +200,7 @@ move_window_leftmargin_up:
     always_show_msg_changing := 1
   } else
   {
-    leftmargin := leftmargin + 80
+    leftmargin := leftmargin + leftmarginstep
     if (leftmargin > leftmarginmax)
     {
       leftmargin := leftmarginmax
@@ -212,7 +212,7 @@ return
 move_window_leftmargin_down:
   if (action_before)
   {
-    _leftmargin := leftmargin - 80
+    _leftmargin := leftmargin - leftmarginstep
     if (_leftmargin < 0)
     {
       _leftmargin := 0
@@ -221,7 +221,7 @@ move_window_leftmargin_down:
     always_show_msg_changing := 1
   } else
   {
-    leftmargin := leftmargin - 80
+    leftmargin := leftmargin - leftmarginstep
     if (leftmargin < 0)
     {
       leftmargin := 0
