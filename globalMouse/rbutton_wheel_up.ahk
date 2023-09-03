@@ -90,6 +90,10 @@ do_rbutton_wheel_up:
       {
         case 1:
         {
+          gosub up
+        }
+        case 2:
+        {
           gosub ctrl_home
         }
       }

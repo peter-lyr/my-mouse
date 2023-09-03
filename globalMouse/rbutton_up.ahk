@@ -33,7 +33,7 @@ do_rbutton_up:
         }
         case 2:
         {
-          gosub ctrl_v
+          gosub ctrl_c
         }
         case 3:
         {
@@ -73,14 +73,6 @@ do_rbutton_up:
         {
           gosub topmost_toggle
         }
-        case 2:
-        {
-          gosub ctrl_c
-        }
-        case 3:
-        {
-          gosub ctrl_c_text
-        }
       }
     }
     case "left":
@@ -104,6 +96,10 @@ do_rbutton_up:
         case 1:
         {
           gosub minimize_window
+        }
+        case 2:
+        {
+          gosub ctrl_v
         }
       }
     }
