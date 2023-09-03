@@ -15,6 +15,7 @@ direction := ""
 
 gosub circle_init
 gosub msg_init
+gosub mstsc_init
 settimer, mstsc_watcher, 50
 settimer, explorer_watcher, 50
 settimer, neovim_watcher, 50

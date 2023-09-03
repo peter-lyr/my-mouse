@@ -53,6 +53,16 @@ do_rbutton_wheel_down:
         }
       }
     }
+    case "right_up":
+    {
+      switch count
+      {
+        case 4:
+        {
+          gosub mstsc_disable
+        }
+      }
+    }
     case "right_down":
     {
       switch count
