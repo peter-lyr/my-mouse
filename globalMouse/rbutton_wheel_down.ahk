@@ -19,10 +19,6 @@ do_rbutton_wheel_down:
         {
           gosub volume_down
         }
-        case 3:
-        {
-          gosub move_window_leftmargin_down
-        }
         case 4:
         {
           gosub always_show_msg_change_down
@@ -50,6 +46,14 @@ do_rbutton_wheel_down:
         case 2:
         {
           gosub pgdn_40
+        }
+        case 3:
+        {
+          gosub move_window_leftmargin_down
+        }
+        case 4:
+        {
+          gosub move_window_leftmargin_step_down
         }
       }
     }

@@ -230,3 +230,52 @@ move_window_leftmargin_down:
   }
 return
 
+move_window_leftmargin_step_up:
+  if (action_before)
+  {
+    _leftmarginstep := leftmarginstep + 1
+    if (_leftmarginstep > leftmarginmax)
+    {
+      _leftmarginstep := leftmarginmax
+    }
+    push_msg_action(format("leftmarginstep: {:d}->{:d}", leftmarginstep, _leftmarginstep))
+    always_show_msg_changing := 1
+  } else
+  {
+    leftmarginstep := leftmarginstep + 1
+    if (leftmarginstep > leftmarginmax)
+    {
+      leftmarginstep := leftmarginmax
+    }
+    leftmargin := leftmarginstep
+    leftmarginmax := leftmarginstep * 10
+    iniwrite %leftmarginstep%, main.ini, movewindow, leftmarginstep
+    iniwrite %leftmargin%, main.ini, movewindow, leftmargin
+    iniwrite %leftmarginmax%, main.ini, movewindow, leftmarginmax
+  }
+return
+
+move_window_leftmargin_step_down:
+  if (action_before)
+  {
+    _leftmarginstep := leftmarginstep - 1
+    if (_leftmarginstep < 0)
+    {
+      _leftmarginstep := 0
+    }
+    push_msg_action(format("leftmarginstep: {:d}->{:d}", leftmarginstep, _leftmarginstep))
+    always_show_msg_changing := 1
+  } else
+  {
+    leftmarginstep := leftmarginstep - 1
+    if (leftmarginstep < 0)
+    {
+      leftmarginstep := 0
+    }
+    leftmargin := leftmarginstep
+    leftmarginmax := leftmarginstep * 10
+    iniwrite %leftmarginstep%, main.ini, movewindow, leftmarginstep
+    iniwrite %leftmargin%, main.ini, movewindow, leftmargin
+    iniwrite %leftmarginmax%, main.ini, movewindow, leftmarginmax
+  }
+return
