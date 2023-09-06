@@ -9,7 +9,7 @@ do_rbutton_mbutton_up:
     {
       gosub resize_window_do
     }
-    case 4:
+    case 3:
     {
       gosub alt_f4_do
     }

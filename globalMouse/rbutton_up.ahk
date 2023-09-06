@@ -111,14 +111,14 @@ do_rbutton_up:
         {
           gosub navigate_up
         }
-        case 2:
-        {
-          gosub alt_f4
-        }
-        case 3:
-        {
-          gosub task_kill
-        }
+        ; case 2:
+        ; {
+        ;   gosub alt_f4
+        ; }
+        ; case 3:
+        ; {
+        ;   gosub task_kill
+        ; }
       }
     }
     case "left_down":
