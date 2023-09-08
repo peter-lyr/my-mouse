@@ -27,10 +27,6 @@ do_rbutton_up:
         {
           gosub ctrl_c
         }
-        case 3:
-        {
-          gosub ctrl_y
-        }
       }
     }
     case "right":
@@ -116,10 +112,6 @@ do_rbutton_up:
         case 2:
         {
           gosub often_window_new
-        }
-        case 3:
-        {
-          gosub ctrl_z
         }
       }
     }

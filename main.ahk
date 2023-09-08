@@ -83,8 +83,6 @@ gosub keyboard_init
 #include %a_scriptdir%\globalmouse\dt\ctrl_lbutton.ahk
 #include %a_scriptdir%\globalmouse\dt\ctrl_rbutton.ahk
 #include %a_scriptdir%\globalmouse\dt\ctrl_v.ahk
-#include %a_scriptdir%\globalmouse\dt\ctrl_y.ahk
-#include %a_scriptdir%\globalmouse\dt\ctrl_z.ahk
 #include %a_scriptdir%\globalmouse\dt\up.ahk
 #include %a_scriptdir%\globalmouse\dt\down.ahk
 #include %a_scriptdir%\globalmouse\dt\task_kill.ahk
