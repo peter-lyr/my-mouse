@@ -10,7 +10,10 @@ do_rbutton_lbutton_down:
     case 2:
     {
       gosub move_window_pre
-      gosub shift_f12
+      if (direction != "center")
+      {
+        gosub shift_f12
+      }
     }
     case 4:
     {

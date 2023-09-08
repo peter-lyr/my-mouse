@@ -7,11 +7,12 @@ do_rbutton_mbutton_up:
     }
     case 2:
     {
-      gosub resize_window_do
+      ; gosub resize_window_do
+      gosub alt_f4_do
     }
     case 3:
     {
-      gosub alt_f4_do
+      ; gosub alt_f4_do
     }
   }
   switch direction
