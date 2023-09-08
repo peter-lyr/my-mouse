@@ -10,9 +10,25 @@ do_rbutton_lbutton_down:
     case 2:
     {
       gosub move_window_pre
-      if (direction != "center")
+      ; nvim
+      switch direction
       {
-        gosub shift_f12
+        case "up":
+        {
+          gosub nvim_shift_f12
+        }
+        case "right":
+        {
+          gosub nvim_f12
+        }
+        case "down":
+        {
+          gosub nvim_alt_f12
+        }
+        case "left":
+        {
+          gosub nvim_ctrl_f12
+        }
       }
     }
     case 4:

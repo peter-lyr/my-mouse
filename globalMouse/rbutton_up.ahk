@@ -9,15 +9,7 @@ do_rbutton_up:
         {
           gosub click_right
         }
-        case 3:
-        {
-          gosub click_right
-        }
         case 2:
-        {
-          gosub activate_window
-        }
-        case 4:
         {
           gosub activate_window
         }

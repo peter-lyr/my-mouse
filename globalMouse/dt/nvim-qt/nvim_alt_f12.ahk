@@ -1,4 +1,4 @@
-shift_f12:
+nvim_alt_f12:
   if (action_before)
   {
     mousegetpos, , , _id
@@ -7,7 +7,7 @@ shift_f12:
     if (is_neovim(_title, _processname) == 1)
     {
       winget, _processname, processname, ahk_id %_id%
-      push_msg_action("<Shift-F12>")
+      push_msg_action("<Alt-F12> hover")
     }
   } else
   {
@@ -18,9 +18,9 @@ shift_f12:
     {
       click left
       click up left
-      send {Shift down}
+      send {Alt down}
       send {F12 down}
-      send {Shift up}
+      send {Alt up}
       send {F12 up}
     }
   }
