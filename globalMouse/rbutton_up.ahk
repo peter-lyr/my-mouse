@@ -99,7 +99,7 @@ do_rbutton_up:
         {
           gosub navigate_up
         }
-        case 2:
+        case 2: ; nvim
         {
           gosub nvim_f11
         }
