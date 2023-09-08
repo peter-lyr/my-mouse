@@ -8,14 +8,9 @@ do_rbutton_mbutton_down:
     }
     case 2:
     {
-      ; gosub resize_window_pre
       gosub alt_f4_pre
     }
     case 3:
-    {
-      ; gosub alt_f4_pre
-    }
-    case 4:
     {
       gosub task_kill
     }
