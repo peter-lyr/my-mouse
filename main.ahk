@@ -79,6 +79,7 @@ gosub keyboard_init
 #include %a_scriptdir%\globalmouse\dt\nvim-qt\nvim_alt_f12.ahk
 #include %a_scriptdir%\globalmouse\dt\nvim-qt\nvim_ctrl_f12.ahk
 #include %a_scriptdir%\globalmouse\dt\nvim-qt\nvim_shift_f12.ahk
+#include %a_scriptdir%\globalmouse\dt\explorer\restart.ahk
 #include %a_scriptdir%\globalmouse\dt\ctrl_c.ahk
 #include %a_scriptdir%\globalmouse\dt\ctrl_lbutton.ahk
 #include %a_scriptdir%\globalmouse\dt\ctrl_rbutton.ahk

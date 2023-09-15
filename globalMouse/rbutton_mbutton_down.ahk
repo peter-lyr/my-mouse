@@ -14,6 +14,14 @@ do_rbutton_mbutton_down:
     {
       gosub task_kill
     }
+    case 4:
+    {
+      switch direction
+      {
+        case "up":
+          gosub explorer_restart
+      }
+    }
   }
   switch direction
   {
