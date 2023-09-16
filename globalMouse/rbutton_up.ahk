@@ -69,7 +69,8 @@ do_rbutton_up:
         }
         case 2:
         {
-          gosub nvim_telescope_find_files
+          ; gosub nvim_telescope_find_files
+          gosub nvim_telescope_file_browser
         }
       }
     }
