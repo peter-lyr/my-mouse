@@ -29,7 +29,7 @@ navigate_backward:
       {
         push_msg_action("go back")
       }
-      if (is_neovim(global_mouse_title, global_mouse_processname) == 1)
+      if (is_neovim() == 1)
       {
         push_msg_action("go back")
       }
@@ -42,7 +42,7 @@ navigate_backward:
       send, {alt down}{left}
       send, {alt up}
     }
-    if (is_neovim(global_mouse_title, global_mouse_processname) == 1)
+    if (is_neovim() == 1)
     {
       gosub try_activate_global_mouse_id
       send, {ctrl down}o
@@ -60,7 +60,7 @@ navigate_forward:
       {
         push_msg_action("go forward")
       }
-      if (is_neovim(global_mouse_title, global_mouse_processname) == 1)
+      if (is_neovim() == 1)
       {
         push_msg_action("go forward")
       }
@@ -73,7 +73,7 @@ navigate_forward:
       send, {alt down}{right}
       send, {alt up}
     }
-    if (is_neovim(global_mouse_title, global_mouse_processname) == 1)
+    if (is_neovim() == 1)
     {
       gosub try_activate_global_mouse_id
       send, {ctrl down}i

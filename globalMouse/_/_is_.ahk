@@ -50,7 +50,7 @@ is_active_explorer()
   return 0
 }
 
-is_neovim(title, processname)
+is_neovim()
 {
   mousegetpos, , , _temp_id
   winget, _temp_processname, processname, ahk_id %_temp_id%

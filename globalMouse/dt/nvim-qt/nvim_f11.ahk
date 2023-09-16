@@ -4,7 +4,7 @@ nvim_f11:
     mousegetpos, , , _id
     wingettitle, _title, ahk_id %_id%
     winget, _processname, processname, ahk_id %_id%
-    if (is_neovim(_title, _processname) == 1)
+    if (is_neovim() == 1)
     {
       winget, _processname, processname, ahk_id %_id%
       push_msg_action("<F11> ClangdSwitchSourceHeader")
@@ -14,7 +14,7 @@ nvim_f11:
     mousegetpos, , , _id
     wingettitle, _title, ahk_id %_id%
     winget, _processname, processname, ahk_id %_id%
-    if (is_neovim(_title, _processname) == 1)
+    if (is_neovim() == 1)
     {
       click left
       click up left
