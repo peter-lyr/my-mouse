@@ -54,7 +54,8 @@ do_rbutton_up:
         }
         case 2:
         {
-          gosub nvim_telescope_jumplist
+          ; gosub nvim_telescope_jumplist
+          gosub nvim_telescope_ui_all
         }
       }
     }

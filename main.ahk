@@ -82,7 +82,8 @@ gosub keyboard_init
 #include %a_scriptdir%\globalmouse\dt\nvim-qt\nvim_telescope_find_files.ahk
 #include %a_scriptdir%\globalmouse\dt\nvim-qt\nvim_telescope_git_status.ahk
 #include %a_scriptdir%\globalmouse\dt\nvim-qt\nvim_telescope_buffers.ahk
-#include %a_scriptdir%\globalmouse\dt\nvim-qt\nvim_telescope_jumplist.ahk
+; #include %a_scriptdir%\globalmouse\dt\nvim-qt\nvim_telescope_jumplist.ahk
+#include %a_scriptdir%\globalmouse\dt\nvim-qt\nvim_telescope_ui_all.ahk
 #include %a_scriptdir%\globalmouse\dt\explorer\restart.ahk
 #include %a_scriptdir%\globalmouse\dt\ctrl_c.ahk
 #include %a_scriptdir%\globalmouse\dt\ctrl_lbutton.ahk
