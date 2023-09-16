@@ -1,14 +1,20 @@
 ctrl_c:
   if (action_before)
   {
-    if (flag_rbutton_up == 0)
+    if (!is_neovim())
     {
-      push_msg_action("<ctrl-c>")
+      if (flag_rbutton_up == 0)
+      {
+        push_msg_action("<ctrl-c>")
+      }
     }
   } else
   {
-    push_msg("copied")
-    send {ctrl down}c
-    send {ctrl up}
+    if (!is_neovim())
+    {
+      push_msg("copied")
+      send {ctrl down}c
+      send {ctrl up}
+    }
   }
 return
