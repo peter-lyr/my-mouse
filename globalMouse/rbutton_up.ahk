@@ -26,6 +26,7 @@ do_rbutton_up:
         case 2:
         {
           gosub ctrl_c
+          gosub nvim_telescope_git_status
         }
       }
     }
@@ -51,6 +52,10 @@ do_rbutton_up:
         {
           gosub transparency_toggle
         }
+        case 2:
+        {
+          gosub nvim_telescope_jumplist
+        }
       }
     }
     case "up":
@@ -60,6 +65,10 @@ do_rbutton_up:
         case 1:
         {
           gosub topmost_toggle
+        }
+        case 2:
+        {
+          gosub nvim_telescope_find_files
         }
       }
     }
@@ -88,6 +97,7 @@ do_rbutton_up:
         case 2:
         {
           gosub ctrl_v
+          gosub nvim_telescope_buffers
         }
       }
     }
