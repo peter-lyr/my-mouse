@@ -34,10 +34,10 @@ do_rbutton_up:
     {
       switch count
       {
-        case 1:
-        {
-          gosub alt_tab
-        }
+        ; case 1:
+        ; {
+        ;   gosub alt_tab
+        ; }
         case 2:
         {
           gosub esc
@@ -48,14 +48,14 @@ do_rbutton_up:
     {
       switch count
       {
-        case 1:
-        {
-          gosub transparency_toggle
-        }
         case 2:
         {
           ; gosub nvim_telescope_jumplist
           gosub nvim_telescope_ui_all
+        }
+        case 4:
+        {
+          gosub transparency_toggle
         }
       }
     }
@@ -63,14 +63,14 @@ do_rbutton_up:
     {
       switch count
       {
-        case 1:
-        {
-          gosub topmost_toggle
-        }
         case 2:
         {
           ; gosub nvim_telescope_find_files
           gosub nvim_telescope_file_browser
+        }
+        case 4:
+        {
+          gosub topmost_toggle
         }
       }
     }
@@ -121,14 +121,14 @@ do_rbutton_up:
     {
       switch count
       {
-        case 1:
-        {
-          gosub often_window_activate
-        }
-        case 2:
-        {
-          gosub often_window_new
-        }
+        ; case 1:
+        ; {
+        ;   gosub often_window_activate
+        ; }
+        ; case 2:
+        ; {
+        ;   gosub often_window_new
+        ; }
       }
     }
   }

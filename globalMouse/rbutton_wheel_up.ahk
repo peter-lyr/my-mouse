@@ -5,7 +5,7 @@ do_rbutton_wheel_up:
     {
       switch count
       {
-        case 1:
+        case 4:
         {
           gosub transparency_up
         }
