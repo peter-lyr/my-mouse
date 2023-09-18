@@ -26,7 +26,7 @@ do_rbutton_up:
         case 2:
         {
           gosub ctrl_c
-          gosub nvim_ctrl_shift_f12_f2
+          gosub nvim_ctrl_shift_f12_f6
         }
       }
     }
@@ -36,7 +36,7 @@ do_rbutton_up:
       {
         case 1:
         {
-          gosub nvim_ctrl_shift_f12_f6
+          gosub nvim_ctrl_shift_f12_f1
         }
         case 2:
         {
@@ -50,11 +50,11 @@ do_rbutton_up:
       {
         case 1:
         {
-          gosub nvim_ctrl_shift_f12_f6
+          gosub nvim_ctrl_shift_f12_f2
         }
         case 2:
         {
-          gosub nvim_ctrl_shift_f12_f10
+          gosub nvim_ctrl_shift_f12_f8
         }
         case 4:
         {
@@ -68,11 +68,11 @@ do_rbutton_up:
       {
         case 1:
         {
-          gosub nvim_ctrl_shift_f12_f6
+          gosub nvim_ctrl_shift_f12_f5
         }
         case 2:
         {
-          gosub nvim_ctrl_shift_f12_f6
+          gosub nvim_ctrl_shift_f12_f10
         }
         case 4:
         {
@@ -105,7 +105,7 @@ do_rbutton_up:
         case 2:
         {
           gosub ctrl_v
-          gosub nvim_ctrl_shift_f12_f6
+          gosub nvim_ctrl_shift_f12_f7
         }
       }
     }
@@ -115,7 +115,7 @@ do_rbutton_up:
       {
         case 1:
         {
-          gosub nvim_ctrl_shift_f12_f9
+          gosub nvim_ctrl_shift_f12_f4
           gosub navigate_up
         }
         case 2:
@@ -130,11 +130,11 @@ do_rbutton_up:
       {
         case 1:
         {
-          gosub nvim_ctrl_shift_f12_f4
+          gosub nvim_ctrl_shift_f12_f3
         }
         case 2:
         {
-          gosub nvim_ctrl_shift_f12_f5
+          gosub nvim_ctrl_shift_f12_f9
         }
       }
     }
