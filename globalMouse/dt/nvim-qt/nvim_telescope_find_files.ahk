@@ -15,9 +15,8 @@ nvim_telescope_find_files:
       send {Ctrl up}
       send {Shift up}
       send {F12 up}
-      send {Ctrl down}
-      send s
-      send {Ctrl up}
+      send {F4 down}
+      send {F4 up}
     }
   }
 return

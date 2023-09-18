@@ -15,9 +15,8 @@ nvim_telescope_git_status:
       send {Ctrl up}
       send {Shift up}
       send {F12 up}
-      send {Ctrl down}
-      send f
-      send {Ctrl up}
+      send {F2 down}
+      send {F2 up}
     }
   }
 return

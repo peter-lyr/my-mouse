@@ -15,9 +15,8 @@ nvim_telescope_lsp_document_symbols:
       send {Ctrl up}
       send {Shift up}
       send {F12 up}
-      send {Ctrl down}
-      send l
-      send {Ctrl up}
+      send {F8 down}
+      send {F8 up}
     }
   }
 return

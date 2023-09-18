@@ -15,9 +15,8 @@ nvim_telescope_frecency:
       send {Ctrl up}
       send {Shift up}
       send {F12 up}
-      send {Ctrl down}
-      send o
-      send {Ctrl up}
+      send {F5 down}
+      send {F5 up}
     }
   }
 return

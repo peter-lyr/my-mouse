@@ -15,9 +15,8 @@ nvim_telescope_ui_all:
       send {Ctrl up}
       send {Shift up}
       send {F12 up}
-      send {Ctrl down}
-      send u
-      send {Ctrl up}
+      send {F10 down}
+      send {F10 up}
     }
   }
 return

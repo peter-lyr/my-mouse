@@ -15,9 +15,8 @@ nvim_telescope_file_browser:
       send {Ctrl up}
       send {Shift up}
       send {F12 up}
-      send {Ctrl down}
-      send a
-      send {Ctrl up}
+      send {F1 down}
+      send {F1 up}
     }
   }
 return

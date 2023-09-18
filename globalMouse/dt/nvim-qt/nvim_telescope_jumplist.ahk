@@ -15,9 +15,8 @@ nvim_telescope_jumplist:
       send {Ctrl up}
       send {Shift up}
       send {F12 up}
-      send {Ctrl down}
-      send j
-      send {Ctrl up}
+      send {F7 down}
+      send {F7 up}
     }
   }
 return

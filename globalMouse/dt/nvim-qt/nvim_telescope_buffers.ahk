@@ -15,9 +15,8 @@ nvim_telescope_buffers:
       send {Ctrl up}
       send {Shift up}
       send {F12 up}
-      send {Ctrl down}
-      send b
-      send {Ctrl up}
+      send {F3 down}
+      send {F3 up}
     }
   }
 return
