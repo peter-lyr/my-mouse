@@ -1,4 +1,4 @@
-nvim_ctrl_shift_f12_f6:
+nvim_ctrl_shift_f12_f8:
   if (action_before)
   {
     if (is_neovim() == 1)
