@@ -10,7 +10,6 @@ do_rbutton_lbutton_down:
     case 2:
     {
       gosub move_window_pre
-      ; nvim
       switch direction
       {
         case "up":

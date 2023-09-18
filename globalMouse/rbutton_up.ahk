@@ -54,7 +54,6 @@ do_rbutton_up:
         }
         case 2:
         {
-          ; gosub nvim_telescope_jumplist
           gosub nvim_telescope_ui_all
         }
         case 4:
@@ -73,7 +72,6 @@ do_rbutton_up:
         }
         case 2:
         {
-          ; gosub nvim_telescope_find_files
           gosub nvim_telescope_file_browser
         }
         case 4:
@@ -120,7 +118,7 @@ do_rbutton_up:
           gosub nvim_telescope_file_browser_cur
           gosub navigate_up
         }
-        case 2: ; nvim
+        case 2:
         {
           gosub nvim_f11
         }
