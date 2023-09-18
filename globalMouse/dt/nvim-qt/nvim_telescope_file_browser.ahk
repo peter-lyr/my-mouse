@@ -9,9 +9,15 @@ nvim_telescope_file_browser:
   {
     if (is_neovim() == 1)
     {
-      send {Space down}
-      send {Space up}
-      send sa
+      send {Ctrl down}
+      send {Shift down}
+      send {F12 down}
+      send {Ctrl up}
+      send {Shift up}
+      send {F12 up}
+      send {Ctrl down}
+      send a
+      send {Ctrl up}
     }
   }
 return

@@ -34,10 +34,10 @@ do_rbutton_up:
     {
       switch count
       {
-        ; case 1:
-        ; {
-        ;   gosub alt_tab
-        ; }
+        case 1:
+        {
+          gosub nvim_telescope_buffers_cur
+        }
         case 2:
         {
           gosub esc
@@ -48,6 +48,10 @@ do_rbutton_up:
     {
       switch count
       {
+        case 1:
+        {
+          gosub nvim_telescope_lsp_document_symbols
+        }
         case 2:
         {
           ; gosub nvim_telescope_jumplist
@@ -63,6 +67,10 @@ do_rbutton_up:
     {
       switch count
       {
+        case 1:
+        {
+          gosub nvim_telescope_jumplist
+        }
         case 2:
         {
           ; gosub nvim_telescope_find_files
@@ -109,6 +117,7 @@ do_rbutton_up:
       {
         case 1:
         {
+          gosub nvim_telescope_file_browser_cur
           gosub navigate_up
         }
         case 2: ; nvim
@@ -121,14 +130,14 @@ do_rbutton_up:
     {
       switch count
       {
-        ; case 1:
-        ; {
-        ;   gosub often_window_activate
-        ; }
-        ; case 2:
-        ; {
-        ;   gosub often_window_new
-        ; }
+        case 1:
+        {
+          gosub nvim_telescope_find_files
+        }
+        case 2:
+        {
+          gosub nvim_telescope_frecency
+        }
       }
     }
   }

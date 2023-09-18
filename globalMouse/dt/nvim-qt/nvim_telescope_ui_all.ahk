@@ -9,9 +9,15 @@ nvim_telescope_ui_all:
   {
     if (is_neovim() == 1)
     {
-      send {Space down}
-      send {Space up}
-      send sA
+      send {Ctrl down}
+      send {Shift down}
+      send {F12 down}
+      send {Ctrl up}
+      send {Shift up}
+      send {F12 up}
+      send {Ctrl down}
+      send u
+      send {Ctrl up}
     }
   }
 return

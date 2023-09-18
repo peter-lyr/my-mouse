@@ -9,9 +9,15 @@ nvim_telescope_buffers:
   {
     if (is_neovim() == 1)
     {
-      send {Space down}
-      send {Space up}
-      send sb
+      send {Ctrl down}
+      send {Shift down}
+      send {F12 down}
+      send {Ctrl up}
+      send {Shift up}
+      send {F12 up}
+      send {Ctrl down}
+      send b
+      send {Ctrl up}
     }
   }
 return

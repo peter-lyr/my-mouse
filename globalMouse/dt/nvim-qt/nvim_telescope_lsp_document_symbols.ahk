@@ -1,9 +1,9 @@
-nvim_telescope_git_status:
+nvim_telescope_lsp_document_symbols:
   if (action_before)
   {
     if (is_neovim() == 1)
     {
-      push_msg_action("nvim telescope git status")
+      push_msg_action("nvim telescope lsp_document_symbols")
     }
   } else
   {
@@ -16,7 +16,7 @@ nvim_telescope_git_status:
       send {Shift up}
       send {F12 up}
       send {Ctrl down}
-      send f
+      send l
       send {Ctrl up}
     }
   }
