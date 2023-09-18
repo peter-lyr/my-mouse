@@ -134,7 +134,7 @@ do_rbutton_up:
         }
         case 2:
         {
-          gosub nvim_telescope_frecency
+          gosub nvim_telescope_command_history
         }
       }
     }

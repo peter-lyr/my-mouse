@@ -1,9 +1,9 @@
-nvim_telescope_frecency:
+nvim_telescope_command_history:
   if (action_before)
   {
     if (is_neovim() == 1)
     {
-      push_msg_action("nvim telescope frecency")
+      push_msg_action("nvim telescope command_history")
     }
   } else
   {

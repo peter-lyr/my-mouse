@@ -88,7 +88,7 @@ gosub keyboard_init
 #include %a_scriptdir%\globalmouse\dt\nvim-qt\nvim_telescope_file_browser_cur.ahk
 #include %a_scriptdir%\globalmouse\dt\nvim-qt\nvim_telescope_lsp_document_symbols.ahk
 #include %a_scriptdir%\globalmouse\dt\nvim-qt\nvim_telescope_buffers_cur.ahk
-#include %a_scriptdir%\globalmouse\dt\nvim-qt\nvim_telescope_frecency.ahk
+#include %a_scriptdir%\globalmouse\dt\nvim-qt\nvim_telescope_command_history.ahk
 #include %a_scriptdir%\globalmouse\dt\explorer\restart.ahk
 #include %a_scriptdir%\globalmouse\dt\ctrl_c.ahk
 #include %a_scriptdir%\globalmouse\dt\ctrl_lbutton.ahk
