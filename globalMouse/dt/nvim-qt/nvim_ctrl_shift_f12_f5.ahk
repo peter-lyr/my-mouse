@@ -1,9 +1,9 @@
-nvim_telescope_find_files:
+nvim_ctrl_shift_f12_f5:
   if (action_before)
   {
     if (is_neovim() == 1)
     {
-      push_msg_action("nvim telescope find_files")
+      push_msg_action("nvim telescope nvim_ctrl_shift_f12_f5")
     }
   } else
   {
@@ -15,8 +15,8 @@ nvim_telescope_find_files:
       send {Ctrl up}
       send {Shift up}
       send {F12 up}
-      send {F4 down}
-      send {F4 up}
+      send {F5 down}
+      send {F5 up}
     }
   }
 return

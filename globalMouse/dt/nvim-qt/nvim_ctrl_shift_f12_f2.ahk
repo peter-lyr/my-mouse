@@ -1,9 +1,9 @@
-nvim_telescope_command_history:
+nvim_ctrl_shift_f12_f2:
   if (action_before)
   {
     if (is_neovim() == 1)
     {
-      push_msg_action("nvim telescope command_history")
+      push_msg_action("nvim telescope nvim_ctrl_shift_f12_f2")
     }
   } else
   {
@@ -15,8 +15,8 @@ nvim_telescope_command_history:
       send {Ctrl up}
       send {Shift up}
       send {F12 up}
-      send {F5 down}
-      send {F5 up}
+      send {F2 down}
+      send {F2 up}
     }
   }
 return

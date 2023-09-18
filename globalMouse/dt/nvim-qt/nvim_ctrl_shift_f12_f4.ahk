@@ -1,9 +1,9 @@
-nvim_telescope_ui_all:
+nvim_ctrl_shift_f12_f4:
   if (action_before)
   {
     if (is_neovim() == 1)
     {
-      push_msg_action("nvim telescope ui all")
+      push_msg_action("nvim telescope nvim_ctrl_shift_f12_f4")
     }
   } else
   {
@@ -15,8 +15,8 @@ nvim_telescope_ui_all:
       send {Ctrl up}
       send {Shift up}
       send {F12 up}
-      send {F10 down}
-      send {F10 up}
+      send {F4 down}
+      send {F4 up}
     }
   }
 return

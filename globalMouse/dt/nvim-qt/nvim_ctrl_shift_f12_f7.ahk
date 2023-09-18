@@ -1,9 +1,9 @@
-nvim_telescope_file_browser:
+nvim_ctrl_shift_f12_f6:
   if (action_before)
   {
     if (is_neovim() == 1)
     {
-      push_msg_action("nvim telescope file browser")
+      push_msg_action("nvim telescope nvim_ctrl_shift_f12_f7")
     }
   } else
   {
@@ -15,8 +15,8 @@ nvim_telescope_file_browser:
       send {Ctrl up}
       send {Shift up}
       send {F12 up}
-      send {F1 down}
-      send {F1 up}
+      send {F7 down}
+      send {F7 up}
     }
   }
 return

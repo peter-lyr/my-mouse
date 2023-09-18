@@ -26,7 +26,7 @@ do_rbutton_up:
         case 2:
         {
           gosub ctrl_c
-          gosub nvim_telescope_git_status
+          gosub nvim_ctrl_shift_f12_f2
         }
       }
     }
@@ -36,7 +36,7 @@ do_rbutton_up:
       {
         case 1:
         {
-          gosub nvim_telescope_buffers_cur
+          gosub nvim_ctrl_shift_f12_f6
         }
         case 2:
         {
@@ -50,11 +50,11 @@ do_rbutton_up:
       {
         case 1:
         {
-          gosub nvim_telescope_lsp_document_symbols
+          gosub nvim_ctrl_shift_f12_f6
         }
         case 2:
         {
-          gosub nvim_telescope_ui_all
+          gosub nvim_ctrl_shift_f12_f10
         }
         case 4:
         {
@@ -68,11 +68,11 @@ do_rbutton_up:
       {
         case 1:
         {
-          gosub nvim_telescope_jumplist
+          gosub nvim_ctrl_shift_f12_f6
         }
         case 2:
         {
-          gosub nvim_telescope_file_browser
+          gosub nvim_ctrl_shift_f12_f6
         }
         case 4:
         {
@@ -105,7 +105,7 @@ do_rbutton_up:
         case 2:
         {
           gosub ctrl_v
-          gosub nvim_telescope_buffers
+          gosub nvim_ctrl_shift_f12_f6
         }
       }
     }
@@ -115,7 +115,7 @@ do_rbutton_up:
       {
         case 1:
         {
-          gosub nvim_telescope_file_browser_cur
+          gosub nvim_ctrl_shift_f12_f9
           gosub navigate_up
         }
         case 2:
@@ -130,11 +130,11 @@ do_rbutton_up:
       {
         case 1:
         {
-          gosub nvim_telescope_find_files
+          gosub nvim_ctrl_shift_f12_f4
         }
         case 2:
         {
-          gosub nvim_telescope_command_history
+          gosub nvim_ctrl_shift_f12_f5
         }
       }
     }

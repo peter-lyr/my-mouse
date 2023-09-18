@@ -1,9 +1,9 @@
-nvim_telescope_jumplist:
+nvim_ctrl_shift_f12_f9:
   if (action_before)
   {
     if (is_neovim() == 1)
     {
-      push_msg_action("nvim telescope jumplist")
+      push_msg_action("nvim telescope nvim_ctrl_shift_f12_f9")
     }
   } else
   {
@@ -15,8 +15,8 @@ nvim_telescope_jumplist:
       send {Ctrl up}
       send {Shift up}
       send {F12 up}
-      send {F7 down}
-      send {F7 up}
+      send {F9 down}
+      send {F9 up}
     }
   }
 return
