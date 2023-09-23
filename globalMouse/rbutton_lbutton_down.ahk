@@ -30,20 +30,12 @@ do_rbutton_lbutton_down:
         }
       }
     }
-    case 4:
+    case 3:
     {
-      gosub esc_pre
-    }
-  }
-  switch direction
-  {
-    case "up":
-    {
-      switch count
+      switch direction
       {
-        case 3:
+        case "up":
         {
-          gosub win_comma_down
         }
       }
     }
