@@ -122,10 +122,6 @@ do_rbutton_up:
           gosub nvim_ctrl_shift_f12_f4
           gosub navigate_up
         }
-        case 2:
-        {
-          gosub nvim_f11
-        }
       }
     }
     case "left_down":

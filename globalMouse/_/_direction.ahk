@@ -17,26 +17,28 @@ global_mouse_direction:
       sysget, monitor, monitor, %a_index%
       if (_x >= monitorleft and _x <= monitorright and _y >= monitortop and _y <= monitorbottom)
       {
-        sysget, monitorworkarea, monitorworkarea, %a_index%
+        monitorright := monitorright - 1
+        monitorbottom := monitorbottom - 1
+        break
       }
     }
-    if (_x == monitorworkarealeft || _x == monitorworkarearight || _y == monitorworkareatop || _y == monitorworkareabottom)
+    if (_x == monitorleft || _x == monitorright || _y == monitortop || _y == monitorbottom)
     {
-      if (_x == monitorworkarealeft && _y == monitorworkareatop) {
+      if (_x == monitorleft && _y == monitortop) {
         direction := "side_left_up"
-      } else if (_x == monitorworkarearight && _y == monitorworkareatop) {
+      } else if (_x == monitorright && _y == monitortop) {
         direction := "side_right_up"
-      } else if (_x == monitorworkarearight && _y == monitorworkareabottom) {
+      } else if (_x == monitorright && _y == monitorbottom) {
         direction := "side_right_down"
-      } else if (_x == monitorworkarealeft && _y == monitorworkareabottom) {
+      } else if (_x == monitorleft && _y == monitorbottom) {
         direction := "side_left_down"
-      } else if (_x == monitorworkareatop) {
+      } else if (_y == monitortop) {
         direction := "side_up"
-      } else if (_x == monitorworkarearight) {
+      } else if (_x == monitorright) {
         direction := "side_right"
-      } else if (_x == monitorworkareabottom) {
+      } else if (_y == monitorbottom) {
         direction := "side_down"
-      } else if (_x == monitorworkarealeft) {
+      } else if (_x == monitorleft) {
         direction := "side_left"
       }
     } else

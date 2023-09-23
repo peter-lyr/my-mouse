@@ -1,5 +1,6 @@
 do_rbutton_lbutton_down:
   gosub count_pre
+    push_msg_action(format("_x: {:d}, _y: {:d}, monitorright: {:d}, monitorleft: {:d}, monitorbottom: {:d}, monitortop: {:d}, ", _x, _y, monitorright, monitorleft, monitorbottom, monitortop))
   switch count
   {
     case 1:
