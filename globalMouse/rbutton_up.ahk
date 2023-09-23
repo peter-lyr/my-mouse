@@ -36,6 +36,10 @@ do_rbutton_up:
       {
         case 1:
         {
+          if (is_neovim() == 0)
+          {
+            gosub alt_tab
+          }
           gosub nvim_ctrl_shift_f12_f1
         }
         case 2:
