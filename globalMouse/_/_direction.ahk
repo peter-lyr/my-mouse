@@ -11,37 +11,42 @@ global_mouse_direction:
     direction := "center"
   } else
   {
-    _dx := _dx * _gap / _c
-    _dy := _dy * _gap / _c
-    if (abs(_dx) >= _min and abs(_dx) <= _max and abs(_dy) >= _min and abs(_dy) <= _max)
+    if (1)
     {
-      if (_dx >= 0 and _dy <= 0)
-      {
-        direction := "right_up"
-      } else if (_dx >= 0 and _dy >= 0)
-      {
-        direction := "right_down"
-      } else if (_dx <= 0 and _dy >= 0)
-      {
-        direction := "left_down"
-      } else
-      {
-        direction := "left_up"
-      }
     } else
     {
-      if (abs(_dx) <= _min and _dy <= 0)
+      _dx := _dx * _gap / _c
+      _dy := _dy * _gap / _c
+      if (abs(_dx) >= _min and abs(_dx) <= _max and abs(_dy) >= _min and abs(_dy) <= _max)
       {
-        direction := "up"
-      } else if (abs(_dy) <= _min and _dx >= 0)
-      {
-        direction := "right"
-      } else if (abs(_dx) <= _min and _dy >= 0)
-      {
-        direction := "down"
+        if (_dx >= 0 and _dy <= 0)
+        {
+          direction := "right_up"
+        } else if (_dx >= 0 and _dy >= 0)
+        {
+          direction := "right_down"
+        } else if (_dx <= 0 and _dy >= 0)
+        {
+          direction := "left_down"
+        } else
+        {
+          direction := "left_up"
+        }
       } else
       {
-        direction := "left"
+        if (abs(_dx) <= _min and _dy <= 0)
+        {
+          direction := "up"
+        } else if (abs(_dy) <= _min and _dx >= 0)
+        {
+          direction := "right"
+        } else if (abs(_dx) <= _min and _dy >= 0)
+        {
+          direction := "down"
+        } else
+        {
+          direction := "left"
+        }
       }
     }
   }
