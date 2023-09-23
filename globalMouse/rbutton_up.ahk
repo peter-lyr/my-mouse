@@ -142,5 +142,101 @@ do_rbutton_up:
         }
       }
     }
+    case "side_left_up":
+    {
+      switch count
+      {
+        case 1:
+        {
+          gosub f1
+        }
+        case 2:
+        {
+          gosub f9
+        }
+      }
+    }
+    case "side_up":
+    {
+      switch count
+      {
+        case 1:
+        {
+          gosub f2
+        }
+      }
+    }
+    case "side_right_up":
+    {
+      switch count
+      {
+        case 1:
+        {
+          gosub f3
+        }
+        case 2:
+        {
+          gosub f10
+        }
+      }
+    }
+    case "side_right":
+    {
+      switch count
+      {
+        case 1:
+        {
+          gosub f4
+        }
+      }
+    }
+    case "side_right_down":
+    {
+      switch count
+      {
+        case 1:
+        {
+          gosub f5
+        }
+        case 2:
+        {
+          gosub f11
+        }
+      }
+    }
+    case "side_down":
+    {
+      switch count
+      {
+        case 1:
+        {
+          gosub f6
+        }
+      }
+    }
+    case "side_left_down":
+    {
+      switch count
+      {
+        case 1:
+        {
+          gosub f7
+        }
+        case 2:
+        {
+          gosub f12
+        }
+      }
+    }
+    case "side_left":
+    {
+      switch count
+      {
+        case 1:
+        {
+          gosub f8
+        }
+      }
+    }
   }
 return
