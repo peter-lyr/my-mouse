@@ -11,8 +11,34 @@ global_mouse_direction:
     direction := "center"
   } else
   {
-    if (1)
+    sysget, monitorcount, monitorcount
+    loop, %monitorcount%
     {
+      sysget, monitor, monitor, %a_index%
+      if (_x >= monitorleft and _x <= monitorright and _y >= monitortop and _y <= monitorbottom)
+      {
+        sysget, monitorworkarea, monitorworkarea, %a_index%
+      }
+    }
+    if (_x == monitorworkarealeft || _x == monitorworkarearight || _y == monitorworkareatop || _y == monitorworkareabottom)
+    {
+      if (_x == monitorworkarealeft && _y == monitorworkareatop) {
+        direction := "side_left_up"
+      } else if (_x == monitorworkarearight && _y == monitorworkareatop) {
+        direction := "side_right_up"
+      } else if (_x == monitorworkarearight && _y == monitorworkareabottom) {
+        direction := "side_right_down"
+      } else if (_x == monitorworkarealeft && _y == monitorworkareabottom) {
+        direction := "side_left_down"
+      } else if (_x == monitorworkareatop) {
+        direction := "side_up"
+      } else if (_x == monitorworkarearight) {
+        direction := "side_right"
+      } else if (_x == monitorworkareabottom) {
+        direction := "side_down"
+      } else if (_x == monitorworkarealeft) {
+        direction := "side_left"
+      }
     } else
     {
       _dx := _dx * _gap / _c
