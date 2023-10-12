@@ -63,6 +63,7 @@ gosub keyboard_init
 #include %a_scriptdir%\globalmouse\do\minimize_window.ahk
 #include %a_scriptdir%\globalmouse\do\volume.ahk
 #include %a_scriptdir%\globalmouse\do\shift_wheel.ahk
+#include %a_scriptdir%\globalmouse\do\ctrl_wheel.ahk
 #include %a_scriptdir%\globalmouse\do\pg_updn.ahk
 #include %a_scriptdir%\globalmouse\do\pg_updn_40.ahk
 #include %a_scriptdir%\globalmouse\do\ctrl_home_end.ahk

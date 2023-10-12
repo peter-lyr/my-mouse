@@ -61,6 +61,10 @@ do_rbutton_wheel_down:
     {
       switch count
       {
+        case 1:
+        {
+          gosub ctrl_wheel_down
+        }
         case 4:
         {
           gosub mstsc_disable
