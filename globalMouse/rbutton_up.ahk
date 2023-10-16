@@ -60,6 +60,10 @@ do_rbutton_up:
         {
           gosub nvim_ctrl_shift_f12_f8
         }
+        case 3:
+        {
+          gosub snipaste_fix_captured
+        }
         case 4:
         {
           gosub transparency_toggle
@@ -77,6 +81,10 @@ do_rbutton_up:
         case 2:
         {
           gosub nvim_ctrl_shift_f12_f10
+        }
+        case 3:
+        {
+          gosub snipaste_capture_screen
         }
         case 4:
         {

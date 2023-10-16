@@ -88,6 +88,7 @@ gosub keyboard_init
 #include %a_scriptdir%\globalmouse\dt\nvim-qt\nvim_ctrl_shift_f12_f8.ahk
 #include %a_scriptdir%\globalmouse\dt\nvim-qt\nvim_ctrl_shift_f12_f9.ahk
 #include %a_scriptdir%\globalmouse\dt\nvim-qt\nvim_ctrl_shift_f12_f10.ahk
+#include %a_scriptdir%\globalmouse\dt\snipaste\snipaste.ahk
 #include %a_scriptdir%\globalmouse\dt\explorer\restart.ahk
 #include %a_scriptdir%\globalmouse\dt\f\f1.ahk
 #include %a_scriptdir%\globalmouse\dt\f\f2.ahk
