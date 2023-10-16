@@ -29,6 +29,10 @@ do_rbutton_lbutton_down:
         {
           gosub nvim_ctrl_f12
         }
+        case "left_up":
+        {
+          gosub nvim_ctrl_f11
+        }
       }
     }
     case 3:
