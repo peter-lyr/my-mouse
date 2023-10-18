@@ -1,4 +1,4 @@
-nvim_ctrl_f11:
+nvim_shift_f11:
   if (action_before)
   {
     mousegetpos, , , _id
@@ -7,7 +7,7 @@ nvim_ctrl_f11:
     if (is_neovim() == 1)
     {
       winget, _processname, processname, ahk_id %_id%
-      push_msg_action("<Ctrl-F11> go file")
+      push_msg_action("<Shift-F11> copy file")
     }
   } else
   {
@@ -18,9 +18,9 @@ nvim_ctrl_f11:
     {
       click left
       click up left
-      send {Ctrl down}
+      send {Shift down}
       send {F11 down}
-      send {Ctrl up}
+      send {Shift up}
       send {F11 up}
     }
   }
