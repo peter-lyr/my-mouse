@@ -113,6 +113,7 @@ gosub keyboard_init
 #include %a_scriptdir%\globalmouse\dt\task_kill.ahk
 
 
+#include %A_ScriptDir%\keyboard\ctrl_win_left_right.ahk
 #Include %A_ScriptDir%\keyboard\window.ahk
 #include %a_scriptdir%\keyboard\keyboard_toggle.ahk
 #include %a_scriptdir%\keyboard\keyboard_init.ahk
