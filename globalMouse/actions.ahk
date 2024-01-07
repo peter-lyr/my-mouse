@@ -2,7 +2,7 @@ global_mouse_actions:
   mousegetpos, _x, _y
   _str := "{:s} - [{:d}/{:d}]"
   msg := ""
-  if (direction != "center")
+  if (is_active_neovim() && direction != "center")
   {
     count_canceled := 1
     if (flag_win_move_resize_en == 1) {
