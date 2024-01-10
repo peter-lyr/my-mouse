@@ -120,10 +120,6 @@ gosub keyboard_init
 #include %a_scriptdir%\keyboard\check_explorer.ahk
 #include %a_scriptdir%\keyboard\check_neovim.ahk
 #include %a_scriptdir%\keyboard\alt_left_right_up.ahk
-#include %a_scriptdir%\keyboard\cursor_arrow.ahk
-#include %a_scriptdir%\keyboard\cursor_arrow_ctrl.ahk
-#include %a_scriptdir%\keyboard\cursor_arrow_shift.ahk
-#include %a_scriptdir%\keyboard\cursor_arrow_ctrl_shift.ahk
 
 
 #Include %A_ScriptDir%\test\test.ahk
