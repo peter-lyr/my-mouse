@@ -3,3 +3,5 @@
 - [x] nvim-qt.exe ctrl lbutton rbutton
 - [ ] 2 left down switch active window
 - [ ] add 8 more direction
+
+when neovim active, try winkill ok
